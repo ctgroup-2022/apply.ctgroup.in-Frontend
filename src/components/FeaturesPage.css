@@ -1,0 +1,94 @@
+.features-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.features-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px dashed #ccc;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+.feature-card h2 {
+  font-size: 2rem;
+  color: #ff6600;
+  margin: 10px 0;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.feature-card img {
+  margin-top: 10px;
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 640px) {
+  .features-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .feature-card h2 {
+    font-size: 2.5rem;
+  }
+
+  .feature-card {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-section h1 {
+    font-size: 3rem;
+  }
+
+  .feature-card h2 {
+    font-size: 3rem;
+  }
+
+  .feature-card {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .features-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .feature-card h2 {
+    font-size: 3.5rem;
+  }
+
+  .feature-card {
+    width: 22%;
+  }
+}

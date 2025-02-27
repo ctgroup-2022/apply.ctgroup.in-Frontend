@@ -1,0 +1,33 @@
+@keyframes float {
+  0% { transform: translateY(0px) rotate3d(1, 1, 1, 0deg); }
+  50% { transform: translateY(-10px) rotate3d(1, 1, 1, 2deg); }
+  100% { transform: translateY(0px) rotate3d(1, 1, 1, 0deg); }
+}
+
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shine-effect {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shine 3s infinite linear;
+}

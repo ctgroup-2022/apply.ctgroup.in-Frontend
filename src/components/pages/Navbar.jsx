@@ -1,0 +1,175 @@
+import React, { useState, lazy, Suspense } from "react";
+import {
+  Menu,
+  X,
+  Phone,
+  Search,
+  Instagram,
+  Twitter,
+  Youtube,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
+import NavLink from "./navigation/Navlink";
+import CtLogo from "../../assets/Images/Navbar/ctlogo.png";
+// import NaacLogo from "../../assets/Images/Navbar/naaclogo.webp";
+import "./Navbar.css"
+
+// Lazy load CourseDropdown
+const CourseDropdown = lazy(() => import("./navigation/CourseDropdown"));
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState(false);
+
+  const toggleCourseDropdown = (e) => {
+    e.preventDefault();
+    setIsCourseDropdownOpen((prev) => !prev);
+  };
+
+  return (
+    <nav className="bg-[#224E91] shadow-lg fixed w-full top-0 z-[9999] ">
+      {/* Top bar */}
+      <div className="bg-[#B91C1C] text-white px-4 py-1 hidden md:flex justify-between items-center">
+        <a
+          href="tel:+1234567890"
+          className="flex items-center gap-1 hover:text-gray-200"
+        >
+          <Phone size={14} /> <span>1800-137-2227</span>
+        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.instagram.com/accounts/login/?next=%2Fctgroupofinstitutions%2F"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            <Instagram size={16} />
+          </a>
+          <a
+            href="https://twitter.com/x/migrate?tok=7b2265223a222f637467726f7570736861687075723f6c616e673d656e222c2274223a313734303337383437327d848c724e8cf5e4a99bdc1a3a2256f8db"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            <Twitter size={16} />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCbnz-xueiXi4ksPb_Gbn3xg?view_as=subscriber"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            <Youtube size={16} />
+          </a>
+          <a
+            href="https://in.linkedin.com/company/ct-group-of-institutions"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            <Linkedin size={16} />
+          </a>
+          <a
+            href="https://www.facebook.com/ctgroup.jalandhar/"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            <Facebook size={16} />
+          </a>
+          <span className="h-4 w-px bg-gray-400"></span>
+          <a
+            href="https://shahpur.ctgroup.in/news"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            News
+          </a>
+          <span className="h-4 w-px bg-gray-400"></span>
+          <a
+            href="https://shahpur.ctgroup.in/events"
+            target="_blank"
+            className="hover:text-gray-100"
+          >
+            Events
+          </a>
+        </div>
+      </div>
+
+      {/* Main navbar */}
+      <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20 opacity-95">
+        {/* Logo */}
+        <div className="flex items-center gap-4">
+          {[
+            { src: CtLogo, alt: "CT Logo" },
+            // { src: NaacLogo, alt: "NAAC Logo" },
+          ].map((logo, index) => (
+            <a href="/" key={index} className="flex items-center">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                loading="lazy"
+                className="h-10 lg:h-14"
+              />
+            </a>
+          ))}
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8 text-sm lg:text-base">
+          <NavLink
+            href="#"
+            text="Course List"
+            onClick={toggleCourseDropdown}
+            className="nav bg-red-500 text-red px-6 py-2 rounded-full text-xl"
+          />
+          <button className="p-2 rounded-full ">
+            <Search size={20} className="text-white" />
+          </button>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden p-2 rounded-md text-white hover:text-gray-900"
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden px-4 pb-3">
+          <MobileNavLink
+            href="#"
+            text="Course List"
+            onClick={() => {
+              setIsOpen(false);
+              setIsCourseDropdownOpen((prev) => !prev);
+            }}
+            className="bg-red-500 text-black px-4 py-2 rounded-full text-lg"
+          />
+        </div>
+      )}
+
+      {/* Lazy-loaded Course Dropdown */}
+      <Suspense fallback={<div className="text-center py-4">Loading...</div>}>
+        {isCourseDropdownOpen && (
+          <CourseDropdown
+            isOpen={isCourseDropdownOpen}
+            onClose={() => setIsCourseDropdownOpen(false)}
+          />
+        )}
+      </Suspense>
+    </nav>
+  );
+};
+
+const MobileNavLink = ({ href, text, onClick, className }) => (
+  <a
+    href={href}
+    onClick={onClick}
+    className={`block text-gray-700 hover:text-blue-800 px-3 py-2 rounded-md font-medium ${className}`}
+  >
+    {text}
+  </a>
+);
+
+export default Navbar;
