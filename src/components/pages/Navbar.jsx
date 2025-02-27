@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense, useCallback } from "react";
 import {
   Menu,
   X,
@@ -20,13 +20,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState(false);
 
-  const toggleCourseDropdown = (e) => {
+  // Optimized function to toggle course dropdown
+  const toggleCourseDropdown = useCallback((e) => {
     e.preventDefault();
     setIsCourseDropdownOpen((prev) => !prev);
-  };
+  }, []);
+
+  // Optimized function to toggle menu
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
 
   return (
-    <nav className="bg-[#224E91] shadow-lg fixed w-full top-0 z-[9999] ">
+    <nav className="bg-[#224E91] shadow-lg fixed w-full top-0 z-[9999]">
       {/* Top bar */}
       <div className="bg-[#B91C1C] text-white px-4 py-1 hidden md:flex justify-between items-center">
         <a
@@ -36,25 +42,25 @@ const Navbar = () => {
           <Phone size={14} /> <span>1800-137-2227</span>
         </a>
         <div className="flex items-center gap-4">
-          <a className="hover:text-gray-100">
-            <Instagram size={16} />
-          </a>
-          <a className="hover:text-gray-100">
-            <Twitter size={16} />
-          </a>
-          <a className="hover:text-gray-100">
-            <Youtube size={16} />
-          </a>
-          <a className="hover:text-gray-100">
-            <Linkedin size={16} />
-          </a>
-          <a className="hover:text-gray-100">
-            <Facebook size={16} />
+          {[
+            { icon: Instagram, link: "#" },
+            { icon: Twitter, link: "#" },
+            { icon: Youtube, link: "#" },
+            { icon: Linkedin, link: "#" },
+            { icon: Facebook, link: "#" },
+          ].map(({ icon: Icon, link }, index) => (
+            <a key={index} href={link} className="hover:text-gray-100">
+              <Icon size={16} />
+            </a>
+          ))}
+          <span className="h-4 w-px bg-gray-400"></span>
+          <a className="hover:text-gray-100" href="#">
+            News
           </a>
           <span className="h-4 w-px bg-gray-400"></span>
-          <a className="hover:text-gray-100">News</a>
-          <span className="h-4 w-px bg-gray-400"></span>
-          <a className="hover:text-gray-100">Events</a>
+          <a className="hover:text-gray-100" href="#">
+            Events
+          </a>
         </div>
       </div>
 
@@ -62,22 +68,21 @@ const Navbar = () => {
       <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20 opacity-95">
         {/* Logo */}
         <div className="flex items-center gap-4">
-          <a href="/" className="flex items-center">
-            <img
-              src={CtLogo}
-              alt="CT Logo"
-              loading="lazy"
-              className="h-10 lg:h-14"
-            />
-          </a>
-          <a href="/" className="flex items-center">
-            <img
-              src={NaacLogo}
-              alt="NAAC Logo"
-              loading="lazy"
-              className="h-20 lg:h-24" // Increased from h-10/h-14 to h-12/h-16
-            />
-          </a>
+          {[
+            { src: CtLogo, alt: "CT Logo", width: 120, height: 40 },
+            { src: NaacLogo, alt: "NAAC Logo", width: 120, height: 60 },
+          ].map((img, index) => (
+            <a key={index} href="/" className="flex items-center">
+              <img
+                src={img.src}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                loading="lazy"
+                className="h-auto"
+              />
+            </a>
+          ))}
         </div>
 
         {/* Desktop Menu */}
@@ -86,13 +91,13 @@ const Navbar = () => {
             href="#"
             text="Programs"
             onClick={toggleCourseDropdown}
-            className="nav bg-red-500 text-red px-6 py-2 rounded-full text-xl"
+            className="nav bg-red-500 text-white px-6 py-2 rounded-full text-xl"
           />
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={toggleMenu}
           className="md:hidden p-2 rounded-md text-white hover:text-gray-900"
           aria-label="Toggle Menu"
         >
@@ -128,6 +133,7 @@ const Navbar = () => {
   );
 };
 
+// Optimized MobileNavLink component
 const MobileNavLink = ({ href, text, onClick, className }) => (
   <a
     href={href}

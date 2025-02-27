@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Logo from "../assets/Images/Navbar/logo1.png";
+import NaacLogo from "../assets/Images/Navbar/naaclogo.webp";
 
 const socialLinks = [
   { Icon: FaFacebookF, link: "#", label: "Facebook" },
@@ -22,12 +23,22 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         {/* Left Section */}
         <div className="md:w-1/3 flex flex-col items-start">
-          <img
-            src={Logo}
-            alt="CT Logo"
-            className="mb-4 w-24 sm:w-32"
-            loading="lazy"
-          />
+          <a href="/" className="flex items-center">
+            <img
+              src={Logo}
+              alt="CT Logo"
+              loading="lazy"
+              className="h-10 lg:h-14"
+            />
+          </a>
+          <a href="/" className="flex items-center">
+            <img
+              src={NaacLogo}
+              alt="NAAC Logo"
+              loading="lazy"
+              className="h-20 lg:h-24" // Increased from h-10/h-14 to h-12/h-16
+            />
+          </a>
           <p className="text-xs sm:text-sm leading-relaxed">
             CT Group of Institutions is renowned for its exceptional academic
             programs, providing top-tier education in both undergraduate and

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Suspense } from "react";
-import { initialize } from "./smoothScroll";
 import "./App.css";
 
 import DesktopHeroSection from "./components/pages/DesktopHeroSection";
@@ -27,10 +26,6 @@ const LogoSlider = React.lazy(() => import("./components/pages/LogoSlider"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    initialize();
-  }, []);
 
   return (
     <div data-name="app" className="min-h-screen bg-white">

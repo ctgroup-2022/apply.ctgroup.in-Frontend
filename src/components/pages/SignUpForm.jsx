@@ -23,6 +23,7 @@ export default function SignUpForm() {
     campus: "",
     course: "",
   });
+  const [formErrors, setFormErrors] = useState({});
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false); // Manage button disabled state
 
@@ -143,8 +144,30 @@ export default function SignUpForm() {
     setRecaptchaToken(token);
   };
 
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.fullName) errors.fullName = "Full name is required.";
+    if (!formData.phone) errors.phone = "Phone number is required.";
+    if (!/^[0-9]{10}$/.test(formData.phone))
+      errors.phone = "Phone number must be 10 digits.";
+    if (!formData.email) errors.email = "Email address is required.";
+    if (!/\S+@\S+\.\S+/.test(formData.email))
+      errors.email = "Email address is invalid.";
+    if (!formData.state) errors.state = "State is required.";
+    if (!formData.campus) errors.campus = "Campus is required.";
+    if (!formData.course) errors.course = "Course selection is required.";
+    return errors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormErrors({});
+    const errors = validateForm();
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
     setIsSubmitting(true); // Disable the submit button
 
     if (!recaptchaToken) {
@@ -174,7 +197,7 @@ export default function SignUpForm() {
         `${import.meta.env.VITE_APP_API_URL}/submit-form`,
         formData
       );
-      toast.success("Form submitted successfully!");
+      toast.success("Form Submitted successfully!");
 
       // Reset the form
       setFormData({
@@ -189,7 +212,7 @@ export default function SignUpForm() {
       // Reload the page
       setTimeout(() => {
         window.location.reload();
-      }, 2000); // Adjust the time as needed
+      }, 5000); // Adjust the time as needed
     } catch (error) {
       console.error("Error:", error);
       toast.error("There was an error submitting the form.");
@@ -284,6 +307,11 @@ export default function SignUpForm() {
                       }`}
                     required
                   />
+                  {formErrors[field.id] && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {formErrors[field.id]}
+                    </p>
+                  )}
                 </div>
               ))}
 
@@ -333,6 +361,11 @@ export default function SignUpForm() {
                       ))}
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none" />
+                    {formErrors[select.id] && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {formErrors[select.id]}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
@@ -384,6 +417,11 @@ export default function SignUpForm() {
                   </optgroup>
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none" />
+                {formErrors.course && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.course}
+                  </p>
+                )}
               </div>
 
               <div className="flex justify-center">
