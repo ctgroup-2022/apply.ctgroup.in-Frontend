@@ -1,13 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  BookOpen,
-  Users,
-  Trophy,
-  Globe,
-  Microscope,
-} from "lucide-react";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { GraduationCap, BookOpen, Users, Trophy, Globe, Microscope } from 'lucide-react';
 
 function GridItem({ icon, title, description, color, image }) {
   const Icon = icon;
@@ -29,9 +22,7 @@ function GridItem({ icon, title, description, color, image }) {
       <div
         className="absolute inset-0 rounded-xl shadow-lg transform-gpu transition-transform duration-200 overflow-hidden"
         style={{
-          transform: `rotateY(${mousePosition.x * 20}deg) rotateX(${
-            -mousePosition.y * 20
-          }deg) translateZ(20px)`,
+          transform: `rotateY(${mousePosition.x * 20}deg) rotateX(${-mousePosition.y * 20}deg) translateZ(20px)`,
         }}
       >
         <div className="absolute inset-0">
@@ -47,10 +38,7 @@ function GridItem({ icon, title, description, color, image }) {
             className={`p-4 rounded-full mb-4 transform-gpu transition-all duration-300 group-hover:scale-110 group-hover:rotate-12`}
             style={{ backgroundColor: `${color}40` }}
           >
-            <Icon
-              size={32}
-              className="transform group-hover:rotate-12 transition-transform duration-300"
-            />
+            <Icon size={32} className="transform group-hover:rotate-12 transition-transform duration-300" />
           </div>
           <h3 className="text-2xl font-bold mb-2 text-center">{title}</h3>
           <p className="text-gray-200 text-center">{description}</p>
@@ -68,51 +56,45 @@ function FeaturePage() {
   const items = [
     {
       icon: GraduationCap,
-      title: "Academic Excellence",
-      description: "World-class education with distinguished faculty",
-      color: "#3B82F6",
-      image:
-        "https://www.ctgroup.in/public//frontend/assets/images/institution/top-nav-image-min.jpg",
+      title: 'Academic Excellence',
+      description: 'World-class education with distinguished faculty',
+      color: '#3B82F6',
+      image: 'https://www.ctgroup.in/public//frontend/assets/images/institution/top-nav-image-min.jpg',
     },
     {
       icon: BookOpen,
-      title: "Research Opportunities",
-      description: "Cutting-edge research facilities and programs",
-      color: "#10B981",
-      image:
-        "https://apply.ctgroup.in/assets/imgs/college/CT%20Institute%20of%20Technology%20&%20Research.jpg",
+      title: 'Research Opportunities',
+      description: 'Cutting-edge research facilities and programs',
+      color: '#10B981',
+      image: 'https://apply.ctgroup.in/assets/imgs/college/CT%20Institute%20of%20Technology%20&%20Research.jpg',
     },
     {
       icon: Users,
-      title: "Student Life",
-      description: "Vibrant campus community and activities",
-      color: "#6366F1",
-      image:
-        "https://maqsudan.ctgroup.in/storage/app/public/Campus/CT-Campus-1679914827.jpg",
+      title: 'Student Life',
+      description: 'Vibrant campus community and activities',
+      color: '#6366F1',
+      image: 'https://maqsudan.ctgroup.in/storage/app/public/Campus/CT-Campus-1679914827.jpg',
     },
     {
       icon: Trophy,
-      title: "Athletics",
-      description: "Championship-winning sports programs",
-      color: "#EC4899",
-      image:
-        "https://www.ctuniversity.in/storage/Campus/mobile/CT-Campus-1687337739.jpg",
+      title: 'Athletics',
+      description: 'Championship-winning sports programs',
+      color: '#EC4899',
+      image: 'https://www.ctuniversity.in/storage/Campus/mobile/CT-Campus-1687337739.jpg',
     },
     {
       icon: Globe,
-      title: "Global Perspective",
-      description: "International programs and diverse community",
-      color: "#F59E0B",
-      image:
-        "https://maqsudan.ctgroup.in/storage/app/public/Event/mobile/CT-Event-1681197885.jpg",
+      title: 'Global Perspective',
+      description: 'International programs and diverse community',
+      color: '#F59E0B',
+      image: 'https://maqsudan.ctgroup.in/storage/app/public/Event/mobile/CT-Event-1681197885.jpg',
     },
     {
       icon: Microscope,
-      title: "Innovation Hub",
-      description: "State-of-the-art labs and technology centers",
-      color: "#8B5CF6",
-      image:
-        "https://shahpur.ctgroup.in/storage/app/public/Infrastructure/CT-Infrastructure-1684904532.jpg",
+      title: 'Innovation Hub',
+      description: 'State-of-the-art labs and technology centers',
+      color: '#8B5CF6',
+      image: 'https://shahpur.ctgroup.in/storage/app/public/Infrastructure/CT-Infrastructure-1684904532.jpg',
     },
   ];
 
@@ -121,27 +103,29 @@ function FeaturePage() {
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} // Added once: true to prevent reverse animation
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-5xl md:text-6xl text-white font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
             The Best of Our Offerings
           </h1>
-          <p className="text-xl text-gray-300">
-            Experience world-class education and opportunities
-          </p>
+          <p className="text-xl text-gray-300">Experience world-class education and opportunities</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, index) => (
             <motion.div
               key={index}
               className="transform transition-all duration-500 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }} // Added once: true to prevent reverse animation
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: "easeOut"
+              }}
             >
               <GridItem {...item} />
             </motion.div>

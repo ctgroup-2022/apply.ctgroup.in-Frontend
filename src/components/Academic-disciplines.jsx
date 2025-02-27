@@ -52,11 +52,18 @@ const disciplines = [
 // DisciplineCard component
 const DisciplineCard = ({ icon: Icon, name, color, index }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { threshold: 0.2 });
+  const isInView = useInView(ref, { once: true }); // Added once: true to prevent reverse trigger
 
   const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: 20 }, // Changed from x: -50 to y: 20 for smoother entry
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: index * 0.1
+      }
+    }
   };
 
   return (
@@ -65,7 +72,6 @@ const DisciplineCard = ({ icon: Icon, name, color, index }) => {
       variants={variants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      transition={{ duration: 0.2, delay: index * 0.1 }}
       className="relative group"
     >
       <div
@@ -118,9 +124,10 @@ export default function AcademicDisciplines() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Academic Disciplines</h1>
@@ -139,7 +146,8 @@ export default function AcademicDisciplines() {
           >
             <motion.div
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: true }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
               {disciplines.map((discipline, index) => (

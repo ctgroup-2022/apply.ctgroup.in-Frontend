@@ -3,7 +3,6 @@ import {
   Menu,
   X,
   Phone,
-  Search,
   Instagram,
   Twitter,
   Youtube,
@@ -11,12 +10,11 @@ import {
   Facebook,
 } from "lucide-react";
 import NavLink from "./navigation/Navlink";
-import CtLogo from "../../assets/Images/Navbar/ctlogo.png";
-// import NaacLogo from "../../assets/Images/Navbar/naaclogo.webp";
-import "./Navbar.css"
+import CtLogo from "../../assets/Images/Navbar/logo1.png";
+import NaacLogo from "../../assets/Images/Navbar/naaclogo.webp";
 
 // Lazy load CourseDropdown
-const CourseDropdown = lazy(() => import("./navigation/CourseDropdown"));
+const CourseSection = lazy(() => import("./navigation/CourseSection"));
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,57 +36,25 @@ const Navbar = () => {
           <Phone size={14} /> <span>1800-137-2227</span>
         </a>
         <div className="flex items-center gap-4">
-          <a
-            href="https://www.instagram.com/accounts/login/?next=%2Fctgroupofinstitutions%2F"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
+          <a className="hover:text-gray-100">
             <Instagram size={16} />
           </a>
-          <a
-            href="https://twitter.com/x/migrate?tok=7b2265223a222f637467726f7570736861687075723f6c616e673d656e222c2274223a313734303337383437327d848c724e8cf5e4a99bdc1a3a2256f8db"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
+          <a className="hover:text-gray-100">
             <Twitter size={16} />
           </a>
-          <a
-            href="https://www.youtube.com/channel/UCbnz-xueiXi4ksPb_Gbn3xg?view_as=subscriber"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
+          <a className="hover:text-gray-100">
             <Youtube size={16} />
           </a>
-          <a
-            href="https://in.linkedin.com/company/ct-group-of-institutions"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
+          <a className="hover:text-gray-100">
             <Linkedin size={16} />
           </a>
-          <a
-            href="https://www.facebook.com/ctgroup.jalandhar/"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
+          <a className="hover:text-gray-100">
             <Facebook size={16} />
           </a>
           <span className="h-4 w-px bg-gray-400"></span>
-          <a
-            href="https://shahpur.ctgroup.in/news"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
-            News
-          </a>
+          <a className="hover:text-gray-100">News</a>
           <span className="h-4 w-px bg-gray-400"></span>
-          <a
-            href="https://shahpur.ctgroup.in/events"
-            target="_blank"
-            className="hover:text-gray-100"
-          >
-            Events
-          </a>
+          <a className="hover:text-gray-100">Events</a>
         </div>
       </div>
 
@@ -96,32 +62,32 @@ const Navbar = () => {
       <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20 opacity-95">
         {/* Logo */}
         <div className="flex items-center gap-4">
-          {[
-            { src: CtLogo, alt: "CT Logo" },
-            // { src: NaacLogo, alt: "NAAC Logo" },
-          ].map((logo, index) => (
-            <a href="/" key={index} className="flex items-center">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                loading="lazy"
-                className="h-10 lg:h-14"
-              />
-            </a>
-          ))}
+          <a href="/" className="flex items-center">
+            <img
+              src={CtLogo}
+              alt="CT Logo"
+              loading="lazy"
+              className="h-10 lg:h-14"
+            />
+          </a>
+          <a href="/" className="flex items-center">
+            <img
+              src={NaacLogo}
+              alt="NAAC Logo"
+              loading="lazy"
+              className="h-20 lg:h-24" // Increased from h-10/h-14 to h-12/h-16
+            />
+          </a>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm lg:text-base">
           <NavLink
             href="#"
-            text="Course List"
+            text="Programs"
             onClick={toggleCourseDropdown}
             className="nav bg-red-500 text-red px-6 py-2 rounded-full text-xl"
           />
-          <button className="p-2 rounded-full ">
-            <Search size={20} className="text-white" />
-          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -152,7 +118,7 @@ const Navbar = () => {
       {/* Lazy-loaded Course Dropdown */}
       <Suspense fallback={<div className="text-center py-4">Loading...</div>}>
         {isCourseDropdownOpen && (
-          <CourseDropdown
+          <CourseSection
             isOpen={isCourseDropdownOpen}
             onClose={() => setIsCourseDropdownOpen(false)}
           />
