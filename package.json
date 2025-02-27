@@ -41,8 +41,7 @@
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.1",
     "tailwind-merge": "^2.6.0",
-    "vaul": "^1.1.2",
-    "webfontloader": "^1.6.28"
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

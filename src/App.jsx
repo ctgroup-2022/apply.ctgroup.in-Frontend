@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, Suspense } from "react";
 import "./App.css";
 
 import DesktopHeroSection from "./components/pages/DesktopHeroSection";
@@ -25,41 +25,42 @@ const AcademicDisciplines = React.lazy(() =>
 const LogoSlider = React.lazy(() => import("./components/pages/LogoSlider"));
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
-    <div data-name="app" className="min-h-screen bg-white">
+    <div data-name="app" className="min-h-screen bg-white text-gray-900">
       <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
-
         <Navbar />
 
         {/* Hero Section */}
-        <div className="hidden max-lg:block">
-          <HeroSection />
-        </div>
-        <div className="hidden lg:block">
-          <DesktopHeroSection />
-        </div>
+        <section aria-labelledby="hero-section">
+          <div className="hidden max-lg:block">
+            <HeroSection />
+          </div>
+          <div className="hidden lg:block">
+            <DesktopHeroSection />
+          </div>
+        </section>
 
         {/* Main Sections */}
-        <PlacementSection />
-        <Scroll />
-        <AcademicDisciplines />
+        <main>
+          <PlacementSection />
+          <Scroll />
+          <AcademicDisciplines />
 
-        {/* Sticky and Logo Slider */}
-        <div className="hidden min-[1000px]:block">
-          <StickyScroll />
-        </div>
-        <div className="block min-[1000px]:hidden">
-          <LogoSlider />
-        </div>
+          {/* Sticky and Logo Slider */}
+          <div className="hidden min-[1000px]:block">
+            <StickyScroll />
+          </div>
+          <div className="block min-[1000px]:hidden">
+            <LogoSlider />
+          </div>
 
-        {/* Additional Sections */}
-        <CampusLife />
-        <AwardsSection />
-        <Testimonial />
-        <Explorecollege />
-        <FAQ />
+          {/* Additional Sections */}
+          <CampusLife />
+          <AwardsSection />
+          <Testimonial />
+          <Explorecollege />
+          <FAQ />
+        </main>
 
         {/* Footer */}
         <Footer />

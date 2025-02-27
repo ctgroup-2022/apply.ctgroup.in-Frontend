@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
-import Logo from "../assets/Images/Navbar/logo1.png";
+import Logo from "../assets/Images/Navbar/logo1.webp";
 import NaacLogo from "../assets/Images/Navbar/naaclogo.webp";
 
 const socialLinks = [

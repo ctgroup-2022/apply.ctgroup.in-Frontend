@@ -10,7 +10,7 @@ import {
   Facebook,
 } from "lucide-react";
 import NavLink from "./navigation/Navlink";
-import CtLogo from "../../assets/Images/Navbar/logo1.png";
+import CtLogo from "../../assets/Images/Navbar/logo1.webp";
 import NaacLogo from "../../assets/Images/Navbar/naaclogo.webp";
 
 // Lazy load CourseDropdown
@@ -20,27 +20,29 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState(false);
 
-  // Optimized function to toggle course dropdown
+  // Optimized toggle functions
   const toggleCourseDropdown = useCallback((e) => {
     e.preventDefault();
     setIsCourseDropdownOpen((prev) => !prev);
   }, []);
 
-  // Optimized function to toggle menu
   const toggleMenu = useCallback(() => {
     setIsOpen((prev) => !prev);
   }, []);
 
   return (
     <nav className="bg-[#224E91] shadow-lg fixed w-full top-0 z-[9999]">
-      {/* Top bar */}
+      {/* 🔴 Top Bar */}
       <div className="bg-[#B91C1C] text-white px-4 py-1 hidden md:flex justify-between items-center">
+        {/* 📞 Contact */}
         <a
-          href="tel:+1234567890"
-          className="flex items-center gap-1 hover:text-gray-200"
+          href="tel:1800-137-2227"
+          className="flex items-center gap-1 hover:text-gray-200 transition"
         >
           <Phone size={14} /> <span>1800-137-2227</span>
         </a>
+
+        {/* 🔗 Social Links */}
         <div className="flex items-center gap-4">
           {[
             { icon: Instagram, link: "#" },
@@ -49,63 +51,69 @@ const Navbar = () => {
             { icon: Linkedin, link: "#" },
             { icon: Facebook, link: "#" },
           ].map(({ icon: Icon, link }, index) => (
-            <a key={index} href={link} className="hover:text-gray-100">
+            <a
+              key={index}
+              href={link}
+              className="hover:text-gray-100 transition"
+            >
               <Icon size={16} />
             </a>
           ))}
+
+          {/* 🔸 Separator */}
           <span className="h-4 w-px bg-gray-400"></span>
-          <a className="hover:text-gray-100" href="#">
-            News
-          </a>
-          <span className="h-4 w-px bg-gray-400"></span>
-          <a className="hover:text-gray-100" href="#">
-            Events
-          </a>
+
+          {/* 📰 News & Events */}
+          {["News", "Events"].map((text, idx) => (
+            <a key={idx} className="hover:text-gray-100 transition" href="#">
+              {text}
+            </a>
+          ))}
         </div>
       </div>
 
-      {/* Main navbar */}
+      {/* 🟡 Main Navbar */}
       <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20 opacity-95">
-        {/* Logo */}
+        {/* 🔹 Logos */}
         <div className="flex items-center gap-4">
           {[
-            { src: CtLogo, alt: "CT Logo", width: 120, height: 40 },
-            { src: NaacLogo, alt: "NAAC Logo", width: 120, height: 60 },
+            { src: CtLogo, alt: "CT Logo" },
+            { src: NaacLogo, alt: "NAAC Logo" },
           ].map((img, index) => (
             <a key={index} href="/" className="flex items-center">
               <img
                 src={img.src}
                 alt={img.alt}
-                width={img.width}
-                height={img.height}
+                width={index === 0 ? 160 : 100}
+                height={40}
                 loading="lazy"
-                className="h-auto"
+                className="w-[150px] h-[80px] object-contain"
               />
             </a>
           ))}
         </div>
 
-        {/* Desktop Menu */}
+        {/* 🖥️ Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm lg:text-base">
           <NavLink
             href="#"
             text="Programs"
             onClick={toggleCourseDropdown}
-            className="nav bg-red-500 text-white px-6 py-2 rounded-full text-xl"
+            className="bg-[#EAB308] text-white px-6 py-2 rounded-full text-xl hover:bg-yellow-500 transition"
           />
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* 📱 Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 rounded-md text-white hover:text-gray-900"
+          className="md:hidden p-2 rounded-md text-white hover:text-gray-900 transition"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* 📱 Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-3">
           <MobileNavLink
@@ -115,13 +123,15 @@ const Navbar = () => {
               setIsOpen(false);
               setIsCourseDropdownOpen((prev) => !prev);
             }}
-            className="bg-red-500 text-black px-4 py-2 rounded-full text-lg"
+            className="bg-[#EAB308] text-black px-4 py-2 rounded-full text-lg hover:bg-yellow-500 transition"
           />
         </div>
       )}
 
-      {/* Lazy-loaded Course Dropdown */}
-      <Suspense fallback={<div className="text-center py-4">Loading...</div>}>
+      {/* 🟢 Lazy-loaded Course Dropdown */}
+      <Suspense
+        fallback={<div className="text-center py-4 text-white">Loading...</div>}
+      >
         {isCourseDropdownOpen && (
           <CourseSection
             isOpen={isCourseDropdownOpen}
@@ -133,12 +143,12 @@ const Navbar = () => {
   );
 };
 
-// Optimized MobileNavLink component
+// ✅ Optimized Mobile Navigation Link Component
 const MobileNavLink = ({ href, text, onClick, className }) => (
   <a
     href={href}
     onClick={onClick}
-    className={`block text-gray-700 hover:text-blue-800 px-3 py-2 rounded-md font-medium ${className}`}
+    className={`block text-gray-700 hover:text-blue-800 px-3 py-2 rounded-md font-medium transition ${className}`}
   >
     {text}
   </a>

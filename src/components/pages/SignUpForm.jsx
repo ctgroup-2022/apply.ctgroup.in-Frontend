@@ -26,6 +26,8 @@ export default function SignUpForm() {
   const [formErrors, setFormErrors] = useState({});
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false); // Manage button disabled state
+  const [modalMessage, setModalMessage] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const states = [
     "Andhra Pradesh",
@@ -190,14 +192,16 @@ export default function SignUpForm() {
 
       // Add the form data to Firebase Firestore
       await addDoc(collection(db, FORM_COLLECTION), formData);
-      toast.success("Form submitted successfully!");
 
       // Send form data to your server
       await axios.post(
         `${import.meta.env.VITE_APP_API_URL}/submit-form`,
         formData
       );
-      toast.success("Form Submitted successfully!");
+      
+      // Show success message
+      setModalMessage("Form submitted successfully!");
+      setIsModalOpen(true);
 
       // Reset the form
       setFormData({
@@ -209,13 +213,11 @@ export default function SignUpForm() {
         course: "",
       });
 
-      // Reload the page
-      setTimeout(() => {
-        window.location.reload();
-      }, 5000); // Adjust the time as needed
     } catch (error) {
       console.error("Error:", error);
-      toast.error("There was an error submitting the form.");
+      // Show error message
+      setModalMessage("There was an error submitting the form.");
+      setIsModalOpen(true);
     } finally {
       setIsSubmitting(false); // Re-enable the submit button
     }
@@ -430,6 +432,11 @@ export default function SignUpForm() {
                   onChange={handleRecaptchaChange}
                   className="w-full md:w-auto max-sm:w-80"
                 />
+                {formErrors.recaptcha && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.recaptcha}
+                  </p>
+                )}
               </div>
 
               <button
@@ -449,6 +456,21 @@ export default function SignUpForm() {
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75"
+      >
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 className="text-xl font-bold mb-4 dark:text-white">{modalMessage}</h2>
+          <button
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+            onClick={() => setIsModalOpen(false)}
+          >
+            Close
+          </button>
+        </div>
+      </Modal>
       <ToastContainer
         className="mt-4"
         limit={1} // Limit notifications to 1 at a time

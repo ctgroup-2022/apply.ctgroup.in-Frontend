@@ -26,14 +26,24 @@ function CounterItem({ end, label }) {
   }, [startCounting]);
 
   return (
-    <div ref={ref} className="text-center">
-      <div className="text-5xl font-bold mb-2">
+    <div
+      ref={ref}
+      className="text-center"
+      role="region"
+      aria-labelledby={`${label}-counter`}
+    >
+      <div className="text-5xl font-bold mb-2 text-[#bfa5a7]">
         {count}
-        <span className="text-yellow-600">+</span>
+        <span className="text-[#bfa5a7]">+</span>
       </div>
       <div className="relative pb-4">
-        <span className="text-sm font-medium">{label}</span>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-yellow-600" />
+        <span
+          id={`${label}-counter`}
+          className="text-sm font-medium text-[#bfa5a7]"
+        >
+          {label}
+        </span>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-[#bfa5a7]" />
       </div>
     </div>
   );
@@ -41,14 +51,19 @@ function CounterItem({ end, label }) {
 
 export default function CounterSection() {
   return (
-    <section className="pb-16 ">
+    <section className="pb-16" aria-labelledby="international-counters">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">We Are International</h2>
+        <h2
+          id="international-counters"
+          className="text-3xl font-bold text-center mb-12 text-yellow-400"
+        >
+          We Are International
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <CounterItem end={3110} label="INTERNATIONAL STUDENTS" />
-          <CounterItem end={71} label="VISITING FACULTIES" />
-          <CounterItem end={66} label="PARTNER UNIVERSITIES" />
-          <CounterItem end={710} label="RESEARCH PROJECTS" />
+          <CounterItem end={3110} label="International Students" />
+          <CounterItem end={71} label="Visiting Faculties" />
+          <CounterItem end={66} label="Partner Universities" />
+          <CounterItem end={710} label="Research Projects" />
         </div>
       </div>
     </section>
