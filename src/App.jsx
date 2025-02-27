@@ -21,7 +21,7 @@ const FAQ = React.lazy(() => import("./components/pages/FAQ"));
 const Footer = React.lazy(() => import("./components/Footer"));
 const Explorecollege = React.lazy(() => import("./components/Explorecollege"));
 const AcademicDisciplines = React.lazy(() =>
-  import("./components/academic-disciplines")
+  import("./components/Academic-disciplines")
 );
 const LogoSlider = React.lazy(() => import("./components/pages/LogoSlider"));
 

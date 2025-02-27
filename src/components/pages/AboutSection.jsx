@@ -93,7 +93,7 @@ export default function AboutSection() {
               </p>
               <footer className="mt-2">
                 <p className="text-base font-semibold text-gray-900">
-                  — Wayne Chirisa
+                  — Kashish Singh
                 </p>
               </footer>
             </blockquote>

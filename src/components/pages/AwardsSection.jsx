@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import "./AS.css";
@@ -5,6 +6,18 @@ import naac from "../../assets/Images/naac.jpg";
 import two from "../../img/2.jpg";
 import third from "../../img/3.jpg";
 
+// Animation Variants (Optimized to Avoid Re-Creation)
+const textVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1 },
+};
+
+// Awards Data
 const awardsData = [
   {
     year: "2022",
@@ -12,7 +25,7 @@ const awardsData = [
       "Received the prestigious Sir Viswesvaraya Award for ‘Best Corporate Entity’ at TechKnow '22",
       "Won Sonatype Partner Award",
     ],
-    image: naac, // Replace with actual image URL 
+    image: naac,
   },
   {
     year: "2021",
@@ -20,7 +33,7 @@ const awardsData = [
       "RETINA360 wins 'Digital Technology of the Year: Big Data, IT & Analytics' Award at IWEF 2021",
       "HR team wins ‘Best Business Communication’ Award at Corporate Communication Excellence Awards",
     ],
-    image: two, // Replace with actual image URL
+    image: two,
   },
   {
     year: "2020",
@@ -29,22 +42,11 @@ const awardsData = [
       "rt360 wins ETBFSI Excellence Awards",
       "retina360 wins Digital Technology of the Year at IWEF",
     ],
-    image: third, // Replace with actual image URL
+    image: third,
   },
 ];
 
 const AwardsSection = () => {
-  // Animation Variants
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1 },
-  };
-
   return (
     <section className="relative py-20 px-6 bg-gradient-to-r from-blue-50 to-blue-100">
       {/* Background Design */}
@@ -55,7 +57,7 @@ const AwardsSection = () => {
 
       {/* Section Title */}
       <motion.h1
-        className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold z-10 relative text-center mb-8 text-black"
+        className="text-4xl md:text-5xl lg:text-6xl font-bold z-10 relative text-center mb-8 text-black"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.8 }}
@@ -67,15 +69,13 @@ const AwardsSection = () => {
 
       {/* Timeline */}
       <div className="relative max-w-5xl mx-auto">
-        {/* Vertical Line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-300 h-full z-0"></div>
 
-        {/* Awards List */}
-        {awardsData.map((award, index) => (
+        {awardsData.map(({ year, achievements, image }, index) => (
           <div
-            key={index}
+            key={year}
             className={`relative flex flex-col md:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+              index % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
           >
             {/* Year Circle */}
@@ -87,7 +87,7 @@ const AwardsSection = () => {
               variants={textVariants}
               transition={{ duration: 1, delay: 0.1 }}
             >
-              {award.year}
+              {year}
             </motion.div>
 
             {/* Image */}
@@ -100,8 +100,8 @@ const AwardsSection = () => {
               transition={{ duration: 1, delay: 0.2 }}
             >
               <img
-                src={award.image}
-                alt={`Award ${award.year}`}
+                src={image}
+                alt={`Award in ${year}`}
                 className="w-full h-auto rounded-lg shadow-md"
               />
             </motion.div>
@@ -116,7 +116,7 @@ const AwardsSection = () => {
               transition={{ duration: 1, delay: 0.3 }}
             >
               <ul className="space-y-2">
-                {award.achievements.map((achievement, idx) => (
+                {achievements.map((achievement, idx) => (
                   <li
                     key={idx}
                     className="text-gray-800 text-sm md:text-lg leading-6 font-medium flex items-center gap-2"

@@ -105,7 +105,7 @@ const Navbar = () => {
         <div className="md:hidden px-4 pb-3">
           <MobileNavLink
             href="#"
-            text="Course List"
+            text="Programs"
             onClick={() => {
               setIsOpen(false);
               setIsCourseDropdownOpen((prev) => !prev);

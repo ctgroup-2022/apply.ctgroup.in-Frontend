@@ -10,23 +10,7 @@ import logo4 from '../../assets/Images/logo 4.png';
 import logo5 from '../../assets/Images/logo 5.png';
 import logo6 from '../../assets/Images/logo 6.png';
 import logo7 from '../../assets/Images/logo 7.png';
-import logo8 from '../../assets/Images/logo 8.jpg';
-import logo9 from '../../assets/Images/logo 9.jpg';
-import logo10 from '../../assets/Images/logo 10.jpg';
-import logo11 from '../../assets/Images/logo 11.jpg';
-import logo12 from '../../assets/Images/logo 12.jpg';
-import logo13 from '../../assets/Images/logo 13.jpg';
-import logo14 from '../../assets/Images/logo 14.jpg';
-import logo15 from '../../assets/Images/logo 15.jpg';
-import logo16 from '../../assets/Images/logo 16.jpg';
-import logo17 from '../../assets/Images/logo 17.jpg';
-import logo18 from '../../assets/Images/logo18.jpg';
-import logo19 from '../../assets/Images/logo19.jpg';
-import logo20 from '../../assets/Images/logo 20.jpg';
-import logo21 from '../../assets/Images/logo 21.jpg';
-import logo22 from '../../assets/Images/logo 22.jpg';
-import logo23 from '../../assets/Images/logo 23.jpg';
-import logo24 from '../../assets/Images/logo24.jpg';
+
 
 const LogoSlider = () => {
   const logos = [

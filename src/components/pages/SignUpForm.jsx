@@ -58,72 +58,72 @@ export default function SignUpForm() {
     "Delhi",
     "Jammu and Kashmir",
     "Ladakh",
-    "Puducherry"
+    "Puducherry",
   ];
 
   const campuses = ["Shapur", "Maqsudan"];
 
   const allCourses = {
     after12: [
-      'Bachelor in Architecture (B.Arch)',
-      'Bachelor of Science in Medical Laboratory Science (B.Sc. MLS)',
-      'Bachelor of Arts and Bachelor of Legislative Law (B.A. LLB)',
-      'Bachelor of Commerce and Bachelor of Legislative Law (B.Com. LLB)',
-      'Bachelor of Vocational Education in Interior Design (B.Voc. Interior Designing)',
-      'Bachelor of Technology in Electronics and Communication Engineering/Computer Science and Engineering (B.TECH-ECE/CSE (IKGPTU))',
-      'Bachelor of Technology in Civil Engineering or Mechanical Engineering (B.TECH-CE/ME (IKGPTU))',
-      'Bachelor of Technology in Lateral Entry (B.TECH (LEET))',
-      'Bachelor of Science in Hospitality and Hotel Administration (B.Sc. HHA)',
-      'Craftsmanship Certificate Course in Food Production and Patisserie (CCFP)',
-      'Bachelor of Hotel Management and Catering Technology (BHMCT)',
-      'Bachelor of Vocation in Hospitality and Catering Management (B.Voc (HCM))',
-      'Diploma in Food Production (DFP)',
-      'Bachelor of Tourism and Travel Management (BTTM)',
-      'Bachelor of Science in Fashion Designing (B.Sc. F.D)',
-      'Bachelor of Vocational in Beauty Therapy and Aesthetics (B.Voc (BTA))',
-      '(CTIPS) Bachelor of Pharmacy (B.PHARM)',
-      '(CTCP) Bachelor of Pharmacy (B.PHARM)',
-      '(CTIPS) Bachelor of Pharmacy in Lateral Entry (B.PHARM (LEET))',
-      '(CTCP) Bachelor of Pharmacy in Lateral Entry (B.PHARM (LEET))',
-      '(CTIPS) Diploma in Pharmacy (D.PHARM)',
-      '(CTCP) Diploma in Pharmacy (D.PHARM)',
-      'Bachelor of Science in Biotechnology (B.Sc Biotech)',
-      '(CTIPS) Doctor of Pharmacy (Pharm.D.)',
-      'Bachelor of Commerce (B.Com.)',
-      'Bachelor in Business Administration (BBA)',
-      'Bachelor of Arts (B.A)',
-      'Bachelor of Arts in Journalism and Mass Communication (BAJMC)',
-      'Bachelor in Physiotherapy (BPT)',
-      'Bachelor of Computer Application (BCA)',
-      'Bachelor of Vocation in Software Development (B.Voc (SD))',
-      'Bachelor of Technology in Artificial Intelligence and Machine Learning (B.Tech (AI & ML))'
+      "Bachelor in Architecture (B.Arch)",
+      "Bachelor of Science in Medical Laboratory Science (B.Sc. MLS)",
+      "Bachelor of Arts and Bachelor of Legislative Law (B.A. LLB)",
+      "Bachelor of Commerce and Bachelor of Legislative Law (B.Com. LLB)",
+      "Bachelor of Vocational Education in Interior Design (B.Voc. Interior Designing)",
+      "Bachelor of Technology in Electronics and Communication Engineering/Computer Science and Engineering (B.TECH-ECE/CSE (IKGPTU))",
+      "Bachelor of Technology in Civil Engineering or Mechanical Engineering (B.TECH-CE/ME (IKGPTU))",
+      "Bachelor of Technology in Lateral Entry (B.TECH (LEET))",
+      "Bachelor of Science in Hospitality and Hotel Administration (B.Sc. HHA)",
+      "Craftsmanship Certificate Course in Food Production and Patisserie (CCFP)",
+      "Bachelor of Hotel Management and Catering Technology (BHMCT)",
+      "Bachelor of Vocation in Hospitality and Catering Management (B.Voc (HCM))",
+      "Diploma in Food Production (DFP)",
+      "Bachelor of Tourism and Travel Management (BTTM)",
+      "Bachelor of Science in Fashion Designing (B.Sc. F.D)",
+      "Bachelor of Vocational in Beauty Therapy and Aesthetics (B.Voc (BTA))",
+      "(CTIPS) Bachelor of Pharmacy (B.PHARM)",
+      "(CTCP) Bachelor of Pharmacy (B.PHARM)",
+      "(CTIPS) Bachelor of Pharmacy in Lateral Entry (B.PHARM (LEET))",
+      "(CTCP) Bachelor of Pharmacy in Lateral Entry (B.PHARM (LEET))",
+      "(CTIPS) Diploma in Pharmacy (D.PHARM)",
+      "(CTCP) Diploma in Pharmacy (D.PHARM)",
+      "Bachelor of Science in Biotechnology (B.Sc Biotech)",
+      "(CTIPS) Doctor of Pharmacy (Pharm.D.)",
+      "Bachelor of Commerce (B.Com.)",
+      "Bachelor in Business Administration (BBA)",
+      "Bachelor of Arts (B.A)",
+      "Bachelor of Arts in Journalism and Mass Communication (BAJMC)",
+      "Bachelor in Physiotherapy (BPT)",
+      "Bachelor of Computer Application (BCA)",
+      "Bachelor of Vocation in Software Development (B.Voc (SD))",
+      "Bachelor of Technology in Artificial Intelligence and Machine Learning (B.Tech (AI & ML))",
     ],
     afterGraduation: [
-      '(CTIPS) Master of Pharmacy in Pharmaceutics (M.Pharm)',
-      '(CTIPS) Master of Pharmacy in Pharmacology (M.Pharm)',
-      'Master of Technology in Computer Science Engineering/Mechanical Engineering (M.TECH CSE/ME)',
-      'Master of Business Administration with a specialization in Human Resources/Finance/Marketing (MBA HR/FINANCE/MARKETING)',
-      'Master Of Computer Applications (MCA)',
-      'Bachelor of Education under Guru Nanak Dev University (B.Ed GNDU)',
-      'Master of Hospitality Management & Catering Technology (MHMCT)',
-      'Master of Science in Fashion Designing (M.Sc. Fashion Designing)',
-      'Master of Science in Biotechnology (M.Sc Biotechnology)',
-      '(CTIPS) Masters of Pharmacy in Pharmaceutical Chemistry (M.Pharma)',
-      '(CTIPS) Doctor Of Pharmacy (PHARM.D Post-Baccalaureate)',
-      '(CTCP) Doctor Of Pharmacy (PHARM.D Post-Baccalaureate)',
-      '(CTCP) Master of Pharmacy in Pharmaceutics (M.Pharm)',
-      '(CTCP) Master of Pharmacy in Pharmacology (M.Pharm)',
-      '(CTCP) Masters of Pharmacy in Pharmaceutical Chemistry (M.Pharma)',
-      'Diploma in Elementary Education (D.EL.ED.)'
+      "(CTIPS) Master of Pharmacy in Pharmaceutics (M.Pharm)",
+      "(CTIPS) Master of Pharmacy in Pharmacology (M.Pharm)",
+      "Master of Technology in Computer Science Engineering/Mechanical Engineering (M.TECH CSE/ME)",
+      "Master of Business Administration with a specialization in Human Resources/Finance/Marketing (MBA HR/FINANCE/MARKETING)",
+      "Master Of Computer Applications (MCA)",
+      "Bachelor of Education under Guru Nanak Dev University (B.Ed GNDU)",
+      "Master of Hospitality Management & Catering Technology (MHMCT)",
+      "Master of Science in Fashion Designing (M.Sc. Fashion Designing)",
+      "Master of Science in Biotechnology (M.Sc Biotechnology)",
+      "(CTIPS) Masters of Pharmacy in Pharmaceutical Chemistry (M.Pharma)",
+      "(CTIPS) Doctor Of Pharmacy (PHARM.D Post-Baccalaureate)",
+      "(CTCP) Doctor Of Pharmacy (PHARM.D Post-Baccalaureate)",
+      "(CTCP) Master of Pharmacy in Pharmaceutics (M.Pharm)",
+      "(CTCP) Master of Pharmacy in Pharmacology (M.Pharm)",
+      "(CTCP) Masters of Pharmacy in Pharmaceutical Chemistry (M.Pharma)",
+      "Diploma in Elementary Education (D.EL.ED.)",
     ],
     afterMatric: [
-      'Diploma in Computer Science Engineering (CSE)',
-      'Diploma in Electronics & Communication Engineering (ECE)',
-      'Diploma in Mechanical Engineering (ME)',
-      'Diploma in Electrical Engineering (EE)',
-      'Diploma in Civil Engineering (CE)',
-      'Diploma in Medical Laboratory Technology (DMLT)'
-    ]
+      "Diploma in Computer Science Engineering (CSE)",
+      "Diploma in Electronics & Communication Engineering (ECE)",
+      "Diploma in Mechanical Engineering (ME)",
+      "Diploma in Electrical Engineering (EE)",
+      "Diploma in Civil Engineering (CE)",
+      "Diploma in Medical Laboratory Technology (DMLT)",
+    ],
   };
 
   useEffect(() => {
@@ -199,11 +199,13 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="relative flex items-center justify-center p-4 overflow-hidden h-screen">
-      <div className="w-[27vw] max-sm:w-[90vw] max-lg:w-[50vw] max-w-lg">
-        <div className={`rounded-2xl p-8 transition-all duration-500 backdrop-blur-xl relative ${
-          isDarkMode ? "bg-gray-800/80" : "bg-white/80"
-        }`}>
+    <div className="flex items-center justify-center p-4 overflow-hidden min-h-screen">
+      <div className="w-full max-w-md p-2">
+        <div
+          className={`rounded-2xl p-6 transition-all duration-500 backdrop-blur-xl relative ${
+            isDarkMode ? "bg-gray-800/80" : "bg-white/80"
+          }`}
+        >
           {/* Gradient backgrounds */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-0 left-0 w-40 h-40 rounded-full bg-gradient-to-tr from-yellow-400 via-red-400 to-pink-500 opacity-20 blur-2xl" />
@@ -213,7 +215,7 @@ export default function SignUpForm() {
           {/* Form Content */}
           <div className="relative z-10">
             {/* Header */}
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-6">
               <div>
                 <h1
                   className={`text-2xl font-bold mb-1 flex items-center gap-2 ${
@@ -253,11 +255,11 @@ export default function SignUpForm() {
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-5 p-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               {[
                 { id: "fullName", type: "text", label: "Full Name" },
                 { id: "phone", type: "tel", label: "Phone Number" },
-                { id: "email", type: "email", label: "Email Address" }
+                { id: "email", type: "email", label: "Email Address" },
               ].map((field) => (
                 <div key={field.id} className="relative">
                   <label
@@ -271,18 +273,22 @@ export default function SignUpForm() {
                     type={field.type}
                     id={field.id}
                     value={formData[field.id]}
-                    onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, [field.id]: e.target.value })
+                    }
                     className={`w-full rounded-lg mt-2 px-4 py-2.5 text-sm border transition-colors
-                      ${isDarkMode 
-                        ? "bg-gray-700/50 text-white border-gray-600 focus:border-yellow-400" 
-                        : "bg-white text-gray-800 border-gray-200 focus:border-yellow-500"}`}
+                      ${
+                        isDarkMode
+                          ? "bg-gray-700/50 text-white border-gray-600 focus:border-yellow-400"
+                          : "bg-white text-gray-800 border-gray-200 focus:border-yellow-500"
+                      }`}
                     required
                   />
                 </div>
               ))}
 
               <div className="grid grid-cols-2 gap-4">
-                { [
+                {[
                   {
                     id: "state",
                     label: "State",
@@ -292,7 +298,7 @@ export default function SignUpForm() {
                     id: "campus",
                     label: "Campus",
                     options: campuses,
-                  }
+                  },
                 ].map((select) => (
                   <div key={select.id} className="relative">
                     <label
@@ -306,12 +312,17 @@ export default function SignUpForm() {
                       id={select.id}
                       value={formData[select.id]}
                       onChange={(e) =>
-                        setFormData({ ...formData, [select.id]: e.target.value })
+                        setFormData({
+                          ...formData,
+                          [select.id]: e.target.value,
+                        })
                       }
                       className={`w-full rounded-lg mt-2 px-4 py-2.5 text-sm border appearance-none
-                        ${isDarkMode 
-                          ? "bg-gray-700/50 text-white border-gray-600" 
-                          : "bg-white text-gray-800 border-gray-200"}`}
+                        ${
+                          isDarkMode
+                            ? "bg-gray-700/50 text-white border-gray-600"
+                            : "bg-white text-gray-800 border-gray-200"
+                        }`}
                       required
                     >
                       <option value="">Select {select.label}</option>
@@ -338,27 +349,37 @@ export default function SignUpForm() {
                 <select
                   id="course"
                   value={formData.course}
-                  onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, course: e.target.value })
+                  }
                   className={`w-full rounded-lg mt-2 px-4 py-2.5 text-sm border appearance-none
-                    ${isDarkMode 
-                      ? "bg-gray-700/50 text-white border-gray-600" 
-                      : "bg-white text-gray-800 border-gray-200"}`}
+                    ${
+                      isDarkMode
+                        ? "bg-gray-700/50 text-white border-gray-600"
+                        : "bg-white text-gray-800 border-gray-200"
+                    }`}
                   required
                 >
                   <option value="">Select Course</option>
                   <optgroup label="After +2/Diploma">
                     {allCourses.after12.map((course) => (
-                      <option key={course} value={course}>{course}</option>
+                      <option key={course} value={course}>
+                        {course}
+                      </option>
                     ))}
                   </optgroup>
                   <optgroup label="After Graduation">
                     {allCourses.afterGraduation.map((course) => (
-                      <option key={course} value={course}>{course}</option>
+                      <option key={course} value={course}>
+                        {course}
+                      </option>
                     ))}
                   </optgroup>
                   <optgroup label="After Matric">
                     {allCourses.afterMatric.map((course) => (
-                      <option key={course} value={course}>{course}</option>
+                      <option key={course} value={course}>
+                        {course}
+                      </option>
                     ))}
                   </optgroup>
                 </select>
@@ -369,7 +390,7 @@ export default function SignUpForm() {
                 <ReCAPTCHA
                   sitekey={import.meta.env.VITE_APP_RECAPTCHA_SITE_KEY}
                   onChange={handleRecaptchaChange}
-                  className="w-full md:w-auto"
+                  className="w-full md:w-auto max-sm:w-80"
                 />
               </div>
 
@@ -390,7 +411,7 @@ export default function SignUpForm() {
           </div>
         </div>
       </div>
-      <ToastContainer 
+      <ToastContainer
         className="mt-4"
         limit={1} // Limit notifications to 1 at a time
         autoClose={3000} // Close after 3 seconds

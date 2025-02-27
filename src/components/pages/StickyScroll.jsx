@@ -7,15 +7,15 @@ import stu3 from "../../assets/Images/pngstu/Suneha.png";
 import stu4 from "../../assets/Images/pngstu/girl.png";
 import stu2 from "../../assets/Images/pngstu/Harbaldeep_singh.png";
 
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
 // Slider component
 
 export default function StickyScroll() {
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start start', 'end end'],
+    offset: ["start start", "end end"],
   });
   const items = [
     {
@@ -83,9 +83,7 @@ export default function StickyScroll() {
 
             <LogoSlider />
           </section>
-        
         </div>
-    
       </main>
     </ReactLenis>
   );

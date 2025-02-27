@@ -1,4 +1,3 @@
-Footer.jsx;
 import React from "react";
 import {
   FaFacebookF,
@@ -7,7 +6,7 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
-import Logo from "../assets/Images/Navbar/ctlogo.png";
+import Logo from "../assets/Images/Navbar/logo1.png";
 
 const socialLinks = [
   { Icon: FaFacebookF, link: "#", label: "Facebook" },
@@ -19,7 +18,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-500 text-white py-6 px-4 sm:px-8 md:px-20">
+    <footer className="bg-[#224E91] text-white py-6 px-4 sm:px-8 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         {/* Left Section */}
         <div className="md:w-1/3 flex flex-col items-start">
