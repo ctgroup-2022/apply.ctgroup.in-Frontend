@@ -131,7 +131,7 @@ function CampusLife() {
               className="bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300"
             >
               <feature.icon className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-yellow-400" />
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">{feature.title}</h3>
+              <h2 className="text-lg sm:text-xl font-semibold mb-2">{feature.title}</h2>
               <p className="text-sm sm:text-base text-gray-300">{feature.description}</p>
             </div>
           ))}

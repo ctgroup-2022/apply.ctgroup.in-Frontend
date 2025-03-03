@@ -1,79 +1,53 @@
-import React, { useEffect, useState } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import React, { useEffect, useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 // Import all logos
-import logo1 from '../../assets/Images/logo 1.png';
-import logo2 from '../../assets/Images/logo 2.png';
-import logo3 from '../../assets/Images/logo 3.png';
-import logo4 from '../../assets/Images/logo 4.png';
-import logo5 from '../../assets/Images/logo 5.png';
-import logo6 from '../../assets/Images/logo 6.png';
-import logo7 from '../../assets/Images/logo 7.png';
-
+import logo1 from "../../assets/Images/logo 1.png";
+import logo2 from "../../assets/Images/logo 2.png";
+import logo3 from "../../assets/Images/logo 3.png";
+import logo4 from "../../assets/Images/logo 4.png";
+import logo5 from "../../assets/Images/logo 5.png";
+import logo6 from "../../assets/Images/logo 6.png";
+import logo7 from "../../assets/Images/logo 7.png";
 
 const LogoSlider = () => {
-  const logos = [
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo5,
-    logo6,
-    logo7,
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo5,
-    logo6,
-    logo7,
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo5,
-    logo6,
-    logo7,
-    logo1,
-    logo2,
-    logo3,
-   
-  ];
+  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
+
+  // Duplicate logos for smooth infinite scroll effect
+  const duplicatedLogos = [...logos, ...logos];
 
   // Group logos into 4 columns
-  const groupedLogos = [
-    logos.filter((_, index) => index % 4 === 0), // Column 1
-    logos.filter((_, index) => index % 4 === 1), // Column 2
-    logos.filter((_, index) => index % 4 === 2), // Column 3
-    logos.filter((_, index) => index % 4 === 3), // Column 4
-  ];
+  const groupedLogos = [[], [], [], []];
+  duplicatedLogos.forEach((logo, index) => {
+    groupedLogos[index % 4].push(logo);
+  });
 
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const slideOptions = (delay) => ({
-    type: 'loop',
+    type: "loop",
     autoplay: true,
     interval: 2000,
-    direction: 'ttb',
-    height: width < 768 ? '30px' : '400px', // Adjust height based on screen width
+    direction: "ttb",
+    height: width < 768 ? "30px" : "400px", // Adjust height based on screen width
     perPage: 1,
     pagination: false,
     arrows: false,
     speed: 1000,
-    easing: 'linear',
+    easing: "linear",
     autoplayStart: delay,
   });
 
   return (
-    <section className="text-black bg-white flex flex-col px-4 pb-8 md:px-24 lg:px-24 ">
-      <div className="pt-12 md:pt-24 mx-4 md:mx-8 lg:mx-20 min-[1000px]:pt-72 ">
+    <section className="text-black bg-white flex flex-col px-4 pb-8 md:px-24 lg:px-24">
+      <div className="pt-12 md:pt-24 mx-4 md:mx-8 lg:mx-20 min-[1000px]:pt-72">
         <div className="relative flex justify-center items-center h-28">
           <h1 className="text-3xl sm:text-5xl font-bold z-10 relative">
             <span className="text-[#284587]">Recruiters </span>at CT Group
@@ -112,6 +86,7 @@ const LogoSlider = () => {
           <Splide
             key={colIndex}
             options={slideOptions(colIndex % 2 === 0 ? 0 : 2000)}
+            aria-label={`Company Logos Column ${colIndex + 1}`}
             className="w-full h-full"
           >
             {column.map((logo, logoIndex) => (
@@ -119,7 +94,7 @@ const LogoSlider = () => {
                 <div className="img_box flex justify-center items-center">
                   <img
                     src={logo}
-                    alt={`Logo ${logoIndex + 1}`}
+                    alt={`Company Logo ${logoIndex + 1}`}
                     className="w-24 h-18 md:w-36 md:h-27 lg:w-48 lg:h-36 xl:w-56 xl:h-42"
                   />
                 </div>

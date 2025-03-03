@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/Images/Navbar/logo1.webp";
 import NaacLogo from "../assets/Images/Navbar/naaclogo.webp";
 
@@ -23,7 +17,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         {/* Left Section */}
         <div className="md:w-1/3 flex flex-col items-start">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center mb-4">
             <img
               src={Logo}
               alt="CT Logo"
@@ -31,12 +25,12 @@ const Footer = () => {
               className="h-10 lg:h-14"
             />
           </a>
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center mb-4">
             <img
               src={NaacLogo}
               alt="NAAC Logo"
               loading="lazy"
-              className="h-20 lg:h-24" // Increased from h-10/h-14 to h-12/h-16
+              className="h-20 lg:h-24"
             />
           </a>
           <p className="text-xs sm:text-sm leading-relaxed">
@@ -54,9 +48,11 @@ const Footer = () => {
             Jalandhar, Punjab 144020
           </address>
           <p className="text-xs sm:text-sm mb-2">
-            📞 1800-137-2227, +91-181-5055127
+            📞 <a href="tel:18001372227" className="underline text-white hover:text-gray-300">1800-137-2227</a>, <a href="tel:+911815055127" className="underline text-white hover:text-gray-300">+91-181-5055127</a>
           </p>
-          <p className="text-xs sm:text-sm mb-4">✉ info@ctgroup.in</p>
+          <p className="text-xs sm:text-sm mb-4">
+            ✉ <a href="mailto:info@ctgroup.in" className="underline text-white hover:text-gray-300">info@ctgroup.in</a>
+          </p>
           <div className="flex space-x-3">
             {socialLinks.map(({ Icon, link, label }, index) => (
               <a
@@ -65,7 +61,7 @@ const Footer = () => {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-white text-purple-900 rounded-full hover:bg-purple-700 hover:text-white transition-colors duration-300"
+                className="p-2 bg-gray-100 text-purple-900 rounded-full hover:bg-purple-700 hover:text-white transition-colors duration-300"
               >
                 <Icon />
               </a>
@@ -74,8 +70,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white mt-6 pt-4 text-center text-xs sm:text-sm">
-        COPYRIGHT©2024 CT Group. All rights Reserved
+      <div className="border-t border-gray-400 mt-6 pt-4 text-center text-xs sm:text-sm">
+        COPYRIGHT ©2024 CT Group. All rights Reserved
       </div>
     </footer>
   );

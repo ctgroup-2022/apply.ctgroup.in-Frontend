@@ -84,9 +84,9 @@ const DisciplineCard = ({ icon: Icon, name, color, index }) => {
           <div className="p-3 rounded-full bg-indigo-50 group-hover:bg-white/90 transition-colors duration-300">
             <Icon className="w-8 h-8 text-indigo-600" />
           </div>
-          <h3 className="text-sm font-semibold text-gray-900 group-hover:text-indigo-900 transition-colors duration-300">
+          <h2 className="text-sm font-semibold text-gray-900 group-hover:text-indigo-900 transition-colors duration-300">
             {name}
-          </h3>
+          </h2>
         </div>
       </div>
     </motion.div>

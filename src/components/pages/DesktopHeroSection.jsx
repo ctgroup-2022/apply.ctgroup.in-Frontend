@@ -1,8 +1,9 @@
 import React from "react";
-import SignUpForm from "./SignUpForm";
+
 import Desktop from "../../assets/Images/Desktop.png";
 import BackgroundVideo from "../../assets/Images/video.mp4";
 
+const SignUpForm = React.lazy(() => import("./SignUpForm"));
 function DesktopHeroSection() {
   return (
     <>
@@ -11,7 +12,7 @@ function DesktopHeroSection() {
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-70"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80"
         >
           <source src={BackgroundVideo} type="video/mp4" />
         </video>

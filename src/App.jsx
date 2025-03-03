@@ -1,10 +1,11 @@
 import React, { useState, Suspense } from "react";
 import "./App.css";
 
-import DesktopHeroSection from "./components/pages/DesktopHeroSection";
-
 // Lazy load components
 const Navbar = React.lazy(() => import("./components/pages/Navbar"));
+const DesktopHeroSection = React.lazy(() =>
+  import("./components/pages/DesktopHeroSection")
+);
 const HeroSection = React.lazy(() => import("./components/pages/HeroSection"));
 const PlacementSection = React.lazy(() => import("./PlacementSection"));
 const Scroll = React.lazy(() => import("./components/pages/Scroll"));
