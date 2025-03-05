@@ -1,6 +1,6 @@
 import React from "react";
 
-import Desktop from "../../assets/Images/Desktop.png";
+import Desktop from "../../assets/Images/Desktop.webp";
 import BackgroundVideo from "../../assets/Images/video.mp4";
 
 const SignUpForm = React.lazy(() => import("./SignUpForm"));

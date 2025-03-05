@@ -1,5 +1,6 @@
 import React, { useState, Suspense } from "react";
 import "./App.css";
+import Recruiters from "./components/pages/Recruiters";
 
 // Lazy load components
 const Navbar = React.lazy(() => import("./components/pages/Navbar"));
@@ -52,7 +53,7 @@ function App() {
             <StickyScroll />
           </div>
           <div className="block min-[1000px]:hidden">
-            <LogoSlider />
+            <Recruiters/>
           </div>
 
           {/* Additional Sections */}

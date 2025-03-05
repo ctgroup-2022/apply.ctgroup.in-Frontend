@@ -1,7 +1,8 @@
 "use client";
 import { ReactLenis } from "lenis/react";
 import React from "react";
-import LogoSlider from "./LogoSlider";
+// import LogoSlider from "./LogoSlider";
+import Recruiters from "./Recruiters";
 import stu1 from "../../assets/Images/pngstu/Puneet.png";
 import stu3 from "../../assets/Images/pngstu/Suneha.png";
 import stu4 from "../../assets/Images/pngstu/girl.png";
@@ -48,7 +49,7 @@ export default function StickyScroll() {
     <ReactLenis root>
       <main className="bg-white">
         <div className="wrapper">
-          <section className="text-white h-screen w-full grid place-content-center sticky top-0">
+          {/* <section className="text-white h-screen w-full grid place-content-center sticky top-0">
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
             <div className="group flex max-md:flex-col justify-center gap-2 w-[100%] mx-auto pb-10 pt-3">
@@ -76,12 +77,12 @@ export default function StickyScroll() {
                 </article>
               ))}
             </div>
-          </section>
+          </section> */}
 
-          <section className="bg-white text-black grid place-content-center h-[60vh] sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+          <section className="bg-black  grid place-content-center h-[90vh] sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
             <div className="absolute bottom-0 left-0 right-0 top-0 "></div>
 
-            <LogoSlider />
+            <Recruiters />
           </section>
         </div>
       </main>
