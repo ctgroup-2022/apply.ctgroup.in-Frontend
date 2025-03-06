@@ -100,10 +100,10 @@ function CourseSection({ onClose }) {
           {/* Fixed Header */}
           <div className="sticky top-0 bg-white z-20 border-b px-6 py-3 shadow-sm">
             <div className="flex justify-between items-center mb-3">
-              <h2 className="text-xl font-bold text-blue-900">Programs</h2>
+              <h2 className="text-xl font-bold text-dark_text">Programs</h2>
               <button
                 onClick={onClose}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 text-text_color rounded-full transition-colors"
               >
                 <X className="h-5 w-5 text-gray-500 hover:text-gray-700" />
               </button>
@@ -116,7 +116,7 @@ function CourseSection({ onClose }) {
                 placeholder="Search courses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-black"
+                className="w-full px-4 py-2 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-dark_text focus:border-transparent text-sm text-black"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black h-4 w-4" />
             </div>
@@ -144,7 +144,7 @@ function CourseSection({ onClose }) {
                       key={key}
                       className="space-y-2 p-3 rounded-lg border border-gray-200 hover:shadow-md transition-all duration-300"
                     >
-                      <h3 className="text-lg font-semibold text-blue-900 sticky top-0 bg-white py-2 z-10 backdrop-blur-sm bg-white/90">
+                      <h3 className="text-lg font-semibold text-dark_text sticky top-0 bg-white py-2 z-10 backdrop-blur-sm bg-white/90">
                         {key === "after12"
                           ? "After +2/Diploma"
                           : key === "afterGraduation"
@@ -157,7 +157,7 @@ function CourseSection({ onClose }) {
                             key={index}
                             className="p-1.5 hover:bg-gray-50 rounded text-sm"
                           >
-                            <span className="text-gray-700 hover:text-blue-600">
+                          <span className="text-gray-700 hover:text-dark_text">
                               {course}
                             </span>
                           </div>

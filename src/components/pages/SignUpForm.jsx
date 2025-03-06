@@ -244,13 +244,13 @@ export default function SignUpForm() {
               <div>
                 <h1
                   className={`text-2xl font-bold mb-1 flex items-center gap-2 ${
-                    isDarkMode ? "text-white" : "text-gray-800"
+                    isDarkMode ? "text-text_color" : "text-gray-800"
                   }`}
                 >
                   Enquire Now
                   <Sparkles
                     className={`w-5 h-5 ${
-                      isDarkMode ? "text-yellow-400" : "text-yellow-500"
+                      isDarkMode ? "text-[#fcc804]" : "text-[#fcc804]"
                     }`}
                   />
                 </h1>
@@ -442,12 +442,12 @@ export default function SignUpForm() {
               <button
                 type="submit"
                 disabled={isSubmitting} // Disable the button when submitting
-                className={`w-full p-4 text-2xl rounded-xl text-gray-900 font-semibold transition-all duration-300 hover:scale-105 ${
+                className={`w-full p-4 text-2xl rounded-xl text-dark_yellow_text font-semibold transition-all duration-300 hover:scale-105 ${
                   isSubmitting
-                    ? "bg-gray-400 cursor-not-allowed" // Styling for disabled state
+                    ? "bg-light_button_color cursor-not-allowed" // Styling for disabled state
                     : isDarkMode
-                    ? "bg-yellow-500"
-                    : "bg-yellow-600 "
+                    ? "bg-button_color"
+                    : "bg-button_color "
                 }`}
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
@@ -462,19 +462,18 @@ export default function SignUpForm() {
         className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75"
       >
         <div className="bg-black dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-bold mb-4 dark:text-black">{modalMessage}</h2>
+          <h2 className="text-xl font-bold mb-4 dark:text-black">
+            {modalMessage}
+          </h2>
           <button
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+            className="px-4 py-2 bg-primary text-text_color rounded"
             onClick={() => setIsModalOpen(false)}
           >
             Close
           </button>
         </div>
       </Modal>
-      <ToastContainer
-        className="mt-4"
-        position="top-right"
-      />
+      <ToastContainer className="mt-4" position="top-right" />
     </div>
   );
 }

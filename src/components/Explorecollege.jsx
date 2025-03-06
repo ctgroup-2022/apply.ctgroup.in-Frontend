@@ -4,7 +4,7 @@ const Explorecollege = () => {
   return (
     <div className="flex flex-col items-center px-4">
       <h1
-        className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-900 text-center pt-8"
+        className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary text-center pt-8"
         style={{
           fontFamily: "'Poppins', sans-serif",
           fontWeight: 900,

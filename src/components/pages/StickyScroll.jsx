@@ -79,7 +79,7 @@ export default function StickyScroll() {
             </div>
           </section> */}
 
-          <section className="bg-black  grid place-content-center h-[90vh] sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+          <section className="bg-white grid place-content-center h-[90vh] sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
             <div className="absolute bottom-0 left-0 right-0 top-0 "></div>
 
             <Recruiters />

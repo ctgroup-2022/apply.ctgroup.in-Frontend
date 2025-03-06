@@ -53,11 +53,11 @@ const awardsData = [
 
 const AwardsSection = () => {
   return (
-    <section className="relative py-20 px-6 bg-gradient-to-r from-blue-50 to-blue-100">
+    <section className="relative py-20 px-6 bg-gradient-to-r from-[#f3f6fc] to-[#e5ecf9]">
       {/* Background Design */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-300 to-purple-400 opacity-20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-green-300 to-yellow-400 opacity-20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-[#94b7e5] to-[#94b7e5] opacity-20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-[#fca5a5] to-[#ffe943] opacity-20 rounded-full blur-3xl"></div>
       </div>
 
       {/* Section Title */}
@@ -74,7 +74,7 @@ const AwardsSection = () => {
 
       {/* Timeline */}
       <div className="relative max-w-5xl mx-auto">
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-300 h-full z-0"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#94b7e5] h-full z-0"></div>
 
         {awardsData.map(
           ({ year, achievements, image, width, height }, index) => (
@@ -86,7 +86,7 @@ const AwardsSection = () => {
             >
               {/* Year Circle */}
               <motion.div
-                className="relative z-10 flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full shadow-lg font-bold text-white text-lg md:text-xl bg-[#284587] mb-4 md:mb-0"
+                className="relative z-10 flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full shadow-lg font-bold text-white text-lg md:text-xl bg-primary mb-4 md:mb-0"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.8 }}
@@ -129,7 +129,7 @@ const AwardsSection = () => {
                       key={idx}
                       className="text-gray-800 text-sm md:text-lg leading-6 font-medium flex items-center gap-2"
                     >
-                      <span className="w-2 h-2 bg-[#284587] rounded-full"></span>
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
                       {achievement}
                     </li>
                   ))}

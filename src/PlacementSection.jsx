@@ -46,9 +46,7 @@ function PlacementSection() {
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
-        <motion.div
-          className="relative z-10 text-center text-white pt-10"
-        >
+          <motion.div className="relative z-10 text-center text-text_color pt-10">
           <h1 className="text-4xl md:text-4xl font-bold mb-2">
             After CT What Comes Next?
           </h1>
@@ -59,35 +57,29 @@ function PlacementSection() {
             Opportunities With Milestone Packages
           </h3>
         </motion.div>
-        <motion.div
-          className="relative z-10 flex flex-col md:flex-row justify-between items-center min-h-[50vh] max-w-7xl mx-auto gap-10 p-9"
-        >
-          <motion.div
-            className="md:w-2/3 p-14 bg-black/30 backdrop-blur-sm rounded-xl text-center text-white"
-          >
+        <motion.div className="relative z-10 flex flex-col md:flex-row justify-between items-center min-h-[50vh] max-w-7xl mx-auto gap-10 p-9">
+          <motion.div className="md:w-2/3 p-14 bg-black/30 backdrop-blur-sm rounded-xl text-center text-text_color">
             <h4 className="text-2xl font-bold mb-4">We have</h4>
-            <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+            <div className="text-4xl md:text-5xl font-bold text-button_color mb-4">
               2,200+ Recruiters
             </div>
             <p className="text-2xl mb-4">
               Ready to Provide You with the Best Job Offers With up to
             </p>
-            <div className="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">
+            <div className="text-3xl md:text-5xl font-bold text-button_color mb-4">
               51 Lakhs Highest Package
             </div>
             <p className="text-lg mb-4">and average packages of</p>
-            <div className="text-3xl md:text-5xl font-bold text-yellow-400">
+            <div className="text-3xl md:text-5xl font-bold text-button_color">
               7-8 LPA
             </div>
           </motion.div>
-          <motion.div
-            className="md:w-1/3 bg-black/30 backdrop-blur-sm rounded-xl p-10 text-center text-white"
-          >
-            <Award className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
+          <motion.div className="md:w-1/3 bg-black/30 backdrop-blur-sm rounded-xl p-10 text-center text-text_color">
+            <Award className="w-12 h-12 mx-auto mb-4 text-button_color" />
             <h4 className="text-2xl font-bold mb-2">Awarded as the</h4>
             <h5 className="text-2xl font-bold mb-2">Best University in</h5>
             <h6 className="text-2xl font-bold mb-2">placements by</h6>
-            <span className="text-2xl font-bold text-yellow-400">ASSOCHAM</span>
+            <span className="text-2xl font-bold text-button_color">ASSOCHAM</span>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -103,24 +95,19 @@ function PlacementSection() {
         <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10 container mx-auto px-4 pb-16 pt-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <motion.div
-              className="flex-1"
-            >
+            <motion.div className="flex-1">
               <CounterSection />
-              <h2 className="text-4xl md:text-5xl text-white font-bold mt-32">
+              <h2 className="text-4xl md:text-5xl text-text_color font-bold mt-32">
                 Your Future Starts Here
               </h2>
-              <h1 className="text-5xl md:text-6xl text-white font-bold mt-10">
+              <h1 className="text-5xl md:text-6xl text-text_color font-bold mt-10">
                 Our Alumni
               </h1>
-              <h2 className="text-4xl md:text-5xl text-white font-bold mt-10">
+              <h2 className="text-4xl md:text-5xl text-text_color font-bold mt-10">
                 Working With the World's Top Companies
               </h2>
             </motion.div>
-            <motion.div
-              className="flex-1 grid grid-cols-2 gap-4"
-  
-            >
+            <motion.div className="flex-1 grid grid-cols-2 gap-4">
               {alumni.map((person, index) => (
                 <div key={index} className="relative group">
                   <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
@@ -129,7 +116,6 @@ function PlacementSection() {
                       alt={person.name}
                       className="object-cover"
                     />
-                  
                   </div>
                 </div>
               ))}

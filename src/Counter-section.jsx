@@ -32,18 +32,18 @@ function CounterItem({ end, label }) {
       role="region"
       aria-labelledby={`${label}-counter`}
     >
-      <div className="text-5xl font-bold mb-2 text-[#bfa5a7]">
+      <div className="text-5xl font-bold mb-2 text-text_color">
         {count}
-        <span className="text-[#bfa5a7]">+</span>
+        <span className="text-text_color">+</span>
       </div>
       <div className="relative pb-4">
         <span
           id={`${label}-counter`}
-          className="text-sm font-medium text-[#bfa5a7]"
+          className="text-sm font-medium text-text_color"
         >
           {label}
         </span>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-[#bfa5a7]" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-text_color" />
       </div>
     </div>
   );
@@ -55,7 +55,7 @@ export default function CounterSection() {
       <div className="container mx-auto px-4">
         <h2
           id="international-counters"
-          className="text-3xl font-bold text-center mb-12 text-yellow-400"
+          className="text-5xl font-bold text-center mb-12 text-button_color"
         >
           We Are International
         </h2>

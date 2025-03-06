@@ -31,7 +31,7 @@
   --color-bg: #000;
   --color-bg-alt: hsl(15deg 55% 6%);
   --color-link: rgba(255, 255, 255, 0.5);
-  --color-title: #e93f33;
+  --color-title: #b91c1c;
 }
 
 body {
@@ -85,7 +85,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-link);
+  color: #B11F22;
   outline: none;
   cursor: pointer;
 }

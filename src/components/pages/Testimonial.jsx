@@ -66,7 +66,7 @@ const Testimonial = () => {
   }, [position, cardsToShow]);
 
   return (
-    <div className="bg-gradient-to-r from-[#EEF5FF] to-[#E2EDFF]">
+    <div className="bg-gradient-to-r from-[#f3f6fc] to-[#e5ecf9]">
       <div className="max-w-7xl mx-auto px-4 py-10">
         <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 text-black"
@@ -74,7 +74,7 @@ const Testimonial = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="text-[#284587]">Voice</span> Of Our Students
+          <span className="text-primary">Voice Of Our Students</span>
         </motion.h1>
 
         <div className="overflow-hidden relative">
@@ -96,7 +96,7 @@ const Testimonial = () => {
                     : "sm:w-1/3"
                 } px-4`}
               >
-                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300">
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-primary transform hover:scale-105 transition-all duration-300">
                   <img
                     src={image.src}
                     alt={`Slide ${index + 1}`}
@@ -115,7 +115,7 @@ const Testimonial = () => {
               key={idx}
               className={`h-2 rounded-full transition-all duration-300 ${
                 position % images.length === idx
-                  ? "w-6 sm:w-8 bg-blue-600"
+                  ? "w-6 sm:w-8 bg-primary"
                   : "w-2 bg-gray-600"
               }`}
             />

@@ -50,7 +50,7 @@ export default function AboutSection() {
               </div>
 
               {/* Decorative dot pattern */}
-              <div className="absolute -left-12 -top-12 -z-10 hidden h-full w-full rounded-2xl bg-[#224E91] lg:block" />
+              <div className="absolute -left-12 -top-12 -z-10 hidden h-full w-full rounded-2xl bg-primary lg:block" />
             </motion.div>
           </div>
 
@@ -62,15 +62,15 @@ export default function AboutSection() {
             // viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <span className="mb-4 inline-block rounded-full bg-[#224E91] px-4 py-1 text-sm font-medium text-white">
+            <span className="mb-4 inline-block rounded-full bg-primary px-4 py-1 text-sm font-medium text-text_color">
               Established 1997
             </span>
 
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-dark_text sm:text-5xl xl:text-6xl">
               About Us
             </h1>
 
-            <div className="mb-8 space-y-6 text-lg leading-relaxed text-black">
+            <div className="mb-8 space-y-6 text-lg leading-relaxed text-dark_red_text">
               <p>
                 We started back in 1997 with a motive to solve all the dental
                 problems and give our patients an opportunity to smile brighter.
@@ -86,7 +86,7 @@ export default function AboutSection() {
             </div>
 
             {/* Quote */}
-            <blockquote className="mb-12 border-l-4 border-[#224E91] pl-6">
+            {/* <blockquote className="mb-12 border-l-4 border-[#224E91] pl-6">
               <p className="text-lg italic text-gray-600">
                 "A genuine smile comes from the heart, but a healthy smile needs
                 good dental care."
@@ -96,21 +96,21 @@ export default function AboutSection() {
                   — Kashish Singh
                 </p>
               </footer>
-            </blockquote>
+            </blockquote> */}
 
             {/* Stats */}
             <div className="mb-12 grid grid-cols-2 gap-8 sm:grid-cols-3">
               <div>
-                <p className="text-3xl font-bold text-[#224E91]">20+</p>
-                <p className="mt-1 text-sm text-gray-900">Years Experience</p>
+                <p className="text-3xl font-bold text-primary">20+</p>
+                <p className="mt-1 text-sm text-dark_red_text">Years Experience</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-[#224E91]">12k+</p>
-                <p className="mt-1 text-sm text-gray-900">Happy Patients</p>
+                <p className="text-3xl font-bold text-primary">12k+</p>
+                <p className="mt-1 text-sm text-dark_red_text">Happy Patients</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-[#224E91]">15+</p>
-                <p className="mt-1 text-sm text-gray-900">Expert Dentists</p>
+                <p className="text-3xl font-bold text-primary">15+</p>
+                <p className="mt-1 text-sm text-dark_red_text">Expert Dentists</p>
               </div>
             </div>
 

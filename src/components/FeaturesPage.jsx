@@ -62,44 +62,44 @@ function FeaturePage() {
   const items = [
     {
       icon: GraduationCap,
-      title: 'Academic Excellence',
-      description: 'World-class education with distinguished faculty',
-      color: '#3B82F6',
+      title: "Academic Excellence",
+      description: "World-class education with distinguished faculty",
+      color: "text_color",
       image: ctgirls,
     },
     {
       icon: BookOpen,
-      title: 'Research Opportunities',
-      description: 'Cutting-edge research facilities and programs',
-      color: '#10B981',
+      title: "Research Opportunities",
+      description: "Cutting-edge research facilities and programs",
+      color: "text_color",
       image: cttech,
     },
     {
       icon: Users,
-      title: 'Student Life',
-      description: 'Vibrant campus community and activities',
-      color: '#6366F1',
+      title: "Student Life",
+      description: "Vibrant campus community and activities",
+      color: "text_color",
       image: ctlab,
     },
     {
       icon: Trophy,
-      title: 'Athletics',
-      description: 'Championship-winning sports programs',
-      color: '#EC4899',
+      title: "Athletics",
+      description: "Championship-winning sports programs",
+      color: "text_color",
       image: ctcampus,
     },
     {
       icon: Globe,
-      title: 'Global Perspective',
-      description: 'International programs and diverse community',
-      color: '#F59E0B',
+      title: "Global Perspective",
+      description: "International programs and diverse community",
+      color: "text_color",
       image: ctevent,
     },
     {
       icon: Microscope,
-      title: 'Innovation Hub',
-      description: 'State-of-the-art labs and technology centers',
-      color: '#8B5CF6',
+      title: "Innovation Hub",
+      description: "State-of-the-art labs and technology centers",
+      color: "text_color",
       image: ctevent,
     },
   ];
@@ -114,10 +114,10 @@ function FeaturePage() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl md:text-6xl text-white font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+          <h1 className="text-5xl md:text-6xl text-text_color font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-text_color to-text_color">
             The Best of Our Offerings
           </h1>
-          <p className="text-xl text-gray-300">Experience world-class education and opportunities</p>
+          <p className="text-xl text-text_color">Experience world-class education and opportunities</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, index) => (

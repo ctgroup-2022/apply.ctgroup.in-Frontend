@@ -71,7 +71,7 @@ function FAQ() {
           className="text-5xl text-center py-4"
         >
           <h1 className="text-4xl sm:text-5xl font-bold text-center pt-8 relative">
-            <span className="text-[#195CA0]">Check</span> out the FAQ
+            <span className="text-primary">Check out the FAQ</span>
             <svg
               className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1"
               width="300"
@@ -81,13 +81,13 @@ function FAQ() {
             >
               <path
                 d="M0,25 C75,-25 225,75 300,25"
-                stroke="#185da0"
+                stroke="#224e91"
                 strokeWidth="3"
                 fill="none"
               />
               <path
                 d="M0,35 C75,-15 225,85 300,35"
-                stroke="#185da0"
+                stroke="#224e91"
                 strokeWidth="3"
                 fill="none"
               />

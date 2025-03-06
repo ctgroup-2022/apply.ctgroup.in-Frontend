@@ -82,7 +82,7 @@ const DisciplineCard = ({ icon: Icon, name, color, index }) => {
         />
         <div className="flex flex-col items-center text-center space-y-3">
           <div className="p-3 rounded-full bg-indigo-50 group-hover:bg-white/90 transition-colors duration-300">
-            <Icon className="w-8 h-8 text-indigo-600" />
+            <Icon className="w-8 h-8 text-primary" />
           </div>
           <h2 className="text-sm font-semibold text-gray-900 group-hover:text-indigo-900 transition-colors duration-300">
             {name}
@@ -130,8 +130,12 @@ export default function AcademicDisciplines() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Academic Disciplines</h1>
-          <p className="text-2xl font-bold text-[#DCAC04]">Explore our diverse range of academic programs</p>
+          <h1 className="text-5xl font-bold text-primary mb-4">
+            Academic Disciplines
+          </h1>
+          <p className="text-2xl font-bold text-[#cf9300]">
+            Explore our diverse range of academic programs
+          </p>
         </motion.div>
 
         <ErrorBoundary>
@@ -139,7 +143,10 @@ export default function AcademicDisciplines() {
             fallback={
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {[...Array(20)].map((_, i) => (
-                  <div key={i} className="h-28 rounded-xl bg-gray-200 animate-pulse" />
+                  <div
+                    key={i}
+                    className="h-28 rounded-xl bg-gray-200 animate-pulse"
+                  />
                 ))}
               </div>
             }

@@ -13,7 +13,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#224E91] text-white py-6 px-4 sm:px-8 md:px-20">
+    <footer className="bg-primary text-text_color py-6 px-4 sm:px-8 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         {/* Left Section */}
         <div className="md:w-1/3 flex flex-col items-start">
@@ -48,10 +48,10 @@ const Footer = () => {
             Jalandhar, Punjab 144020
           </address>
           <p className="text-xs sm:text-sm mb-2">
-            📞 <a href="tel:18001372227" className="underline text-white hover:text-gray-300">1800-137-2227</a>, <a href="tel:+911815055127" className="underline text-white hover:text-gray-300">+91-181-5055127</a>
+            📞 <a href="tel:18001372227" className="underline text-text_color">1800-137-2227</a>, <a href="tel:+911815055127" className="underline text-text_color">+91-181-5055127</a>
           </p>
           <p className="text-xs sm:text-sm mb-4">
-            ✉ <a href="mailto:info@ctgroup.in" className="underline text-white hover:text-gray-300">info@ctgroup.in</a>
+            ✉ <a href="mailto:info@ctgroup.in" className="underline text-text_color">info@ctgroup.in</a>
           </p>
           <div className="flex space-x-3">
             {socialLinks.map(({ Icon, link, label }, index) => (
@@ -61,7 +61,7 @@ const Footer = () => {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-gray-100 text-purple-900 rounded-full hover:bg-purple-700 hover:text-white transition-colors duration-300"
+                className="p-2 bg-gray-100 text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
               >
                 <Icon />
               </a>

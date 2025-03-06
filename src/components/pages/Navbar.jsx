@@ -34,35 +34,35 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#224E91] shadow-lg fixed w-full top-0 z-[9999]">
+    <nav className="bg-primary shadow-lg fixed w-full top-0 z-[9999]">
       {/* Top Bar */}
-      <div className="bg-[#B91C1C] text-white px-4 py-1 hidden md:flex justify-between items-center">
+      <div className="bg-secondary text-text_color px-4 py-1 hidden md:flex justify-between items-center">
         <a
           href="tel:1800-137-2227"
-          className="flex items-center gap-1 hover:text-gray-200 transition"
+          className="flex items-center gap-2 text-text_color transition"
           aria-label="Call us at 1800-137-2227"
         >
           <Phone size={14} /> <span>1800-137-2227</span>
         </a>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           {[Instagram, Twitter, Youtube, Linkedin, Facebook].map(
             (Icon, index) => (
               <a
                 key={index}
                 href="#"
-                className="hover:text-gray-100 transition"
+                className="text-text_color transition p-2 rounded-lg hover:bg-gray-200"
                 aria-label={`Follow us on ${Icon.name}`}
               >
-                <Icon size={16} />
+                <Icon size={20} />
               </a>
             )
           )}
-          <span className="h-4 w-px bg-gray-400"></span>
+          <span className="h-4 w-px bg-text_color"></span>
           {["News", "Events"].map((text, idx) => (
             <a
               key={idx}
-              className="hover:text-gray-100 transition"
+              className="text-text_color transition"
               href="#"
               aria-label={text}
             >
@@ -81,14 +81,14 @@ const Navbar = () => {
             alt="CT Logo"
             width="150"
             height="80"
-            className="w-[150px] h-[80px] object-contain"
+            className="w-[180px] h-[80px] object-contain"
           />
           <img
             src={Naac}
             alt="Naac"
             width="150"
             height="80"
-            className="w-[150px] h-[80px] object-contain"
+            className="w-[150px] h-[90px] object-contain"
           />
         </a>
 
@@ -98,17 +98,17 @@ const Navbar = () => {
             href="#"
             text="Programs"
             onClick={toggleCourseDropdown}
-            className="bg-[#EAB308] text-white px-6 py-2 rounded-full text-xl "
+            className="bg-secondary text-text_color px-6 py-3 rounded-full text-xl "
           />
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 text-white hover:text-gray-900 transition"
+          className="md:hidden p-3 text-text_color  transition"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -122,7 +122,7 @@ const Navbar = () => {
               setIsOpen(false);
               setIsCourseDropdownOpen((prev) => !prev);
             }}
-            className="bg-[#EAB308] text-black px-4 py-2 rounded-full text-lg hover:bg-yellow-500 transition"
+            className="bg-secondary   px-4 py-2 rounded-full text-lg hover:bg-secondary transition"
           />
         </div>
       )}
@@ -149,7 +149,7 @@ const MobileNavLink = ({ href, text, onClick, className }) => (
   <a
     href={href}
     onClick={onClick}
-    className={`block text-gray-700 hover:text-blue-800 px-3 py-2 rounded-md font-medium transition ${className}`}
+    className={`block text-text_color  px-3 py-2 rounded-md font-medium transition ${className}`}
   >
     {text}
   </a>
