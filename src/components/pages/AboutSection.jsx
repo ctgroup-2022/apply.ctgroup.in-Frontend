@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Audi from "../../assets/Images/audi.jpg";
-import Gidha from "../../assets/Images/culture.jpg";
+
 export default function AboutSection() {
   return (
     <section className="relative w-full h-full bg-gradient-to-br from-white to-blue-50/70 px-4 py-16 sm:px-6 lg:px-8">
@@ -27,7 +26,7 @@ export default function AboutSection() {
               <div className="relative z-10 overflow-hidden rounded-2xl bg-white p-2 shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                 <div className="aspect-[4/3] overflow-hidden rounded-xl">
                   <img
-                    src={Gidha}
+                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243037/culture_dybfpe.jpg"
                     alt="Dental professional"
                     width={800}
                     height={600}
@@ -40,7 +39,7 @@ export default function AboutSection() {
               <div className="absolute -bottom-12 -right-12 z-20 hidden w-48 overflow-hidden rounded-xl bg-white p-1 shadow-lg transition-transform duration-300 hover:scale-105 lg:block">
                 <div className="aspect-square overflow-hidden rounded-lg">
                   <img
-                    src={Audi}
+                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/audi_hcpvmu.jpg"
                     alt="Dental procedure"
                     width={400}
                     height={400}
@@ -102,15 +101,21 @@ export default function AboutSection() {
             <div className="mb-12 grid grid-cols-2 gap-8 sm:grid-cols-3">
               <div>
                 <p className="text-3xl font-bold text-primary">20+</p>
-                <p className="mt-1 text-sm text-dark_red_text">Years Experience</p>
+                <p className="mt-1 text-sm text-dark_red_text">
+                  Years Experience
+                </p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-primary">12k+</p>
-                <p className="mt-1 text-sm text-dark_red_text">Happy Patients</p>
+                <p className="mt-1 text-sm text-dark_red_text">
+                  Happy Patients
+                </p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-primary">15+</p>
-                <p className="mt-1 text-sm text-dark_red_text">Expert Dentists</p>
+                <p className="mt-1 text-sm text-dark_red_text">
+                  Expert Dentists
+                </p>
               </div>
             </div>
 

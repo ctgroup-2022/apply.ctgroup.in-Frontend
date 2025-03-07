@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Users, Trophy, Globe, Microscope } from 'lucide-react';
-import ctevent from "../assets/Images/ctevent.jpg"
-import ctcampus from "../assets/Images/ctcampus.jpg"
-import ctlab from "../assets/Images/ctlab.jpg"
-import cttech from "../assets/Images/cttech.jpg"
-import ctgirls from "../assets/Images/ctgirls.jpg"
 
 function GridItem({ icon, title, description, color, image }) {
   const Icon = icon;
@@ -65,42 +60,48 @@ function FeaturePage() {
       title: "Academic Excellence",
       description: "World-class education with distinguished faculty",
       color: "text_color",
-      image: ctgirls,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/hero1_oejtyu.jpg",
     },
     {
       icon: BookOpen,
       title: "Research Opportunities",
       description: "Cutting-edge research facilities and programs",
       color: "text_color",
-      image: cttech,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243036/cttech_qjmjqp.jpg",
     },
     {
       icon: Users,
       title: "Student Life",
       description: "Vibrant campus community and activities",
       color: "text_color",
-      image: ctlab,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243036/ctlab_lhcl0t.jpg",
     },
     {
       icon: Trophy,
       title: "Athletics",
       description: "Championship-winning sports programs",
       color: "text_color",
-      image: ctcampus,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243028/ctcampus_xdpyad.jpg",
     },
     {
       icon: Globe,
       title: "Global Perspective",
       description: "International programs and diverse community",
       color: "text_color",
-      image: ctevent,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243029/ctevent_jzhfzk.jpg",
     },
     {
       icon: Microscope,
       title: "Innovation Hub",
       description: "State-of-the-art labs and technology centers",
       color: "text_color",
-      image: ctevent,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243029/ctevent_jzhfzk.jpg",
     },
   ];
 

@@ -2,10 +2,6 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion"; // Import Framer Motion
 import { Award } from "lucide-react";
 import CounterSection from "./counter-section";
-import place from "./assets/Images/placement_images/place5.png";
-import placestu from "./assets/Images/placement_images/place6.png";
-import placestu1 from "./assets/Images/placement_images/place1.png";
-import placestu2 from "./assets/Images/placement_images/place2.png";
 
 function PlacementSection() {
   const leftControls = useAnimation();
@@ -13,22 +9,26 @@ function PlacementSection() {
 
   const alumni = [
     {
-      image: place,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243063/place5_n2orvu.png",
       name: "Alumni 1",
       role: "Role 1",
     },
     {
-      image: placestu,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/place6_tlzxrk.png",
       name: "Alumni 2",
       role: "Role 2",
     },
     {
-      image: placestu1,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243059/place1_dye2cl.png",
       name: "Alumni 3",
       role: "Role 3",
     },
     {
-      image: placestu2,
+      image:
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243060/place2_jjdumd.png",
       name: "Alumni 4",
       role: "Role 4",
     },
@@ -42,11 +42,11 @@ function PlacementSection() {
         className="relative min-h-screen bg-cover bg-center"
         style={{
           backgroundImage:
-            'url("https://maqsudan.ctgroup.in/storage/app/public/Campus/CT-Campus-1679914438.jpg")',
+            'url("https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/audi_hcpvmu.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
-          <motion.div className="relative z-10 text-center text-text_color pt-10">
+        <motion.div className="relative z-10 text-center text-text_color pt-10">
           <h1 className="text-4xl md:text-4xl font-bold mb-2">
             After CT What Comes Next?
           </h1>
@@ -79,7 +79,9 @@ function PlacementSection() {
             <h4 className="text-2xl font-bold mb-2">Awarded as the</h4>
             <h5 className="text-2xl font-bold mb-2">Best University in</h5>
             <h6 className="text-2xl font-bold mb-2">placements by</h6>
-            <span className="text-2xl font-bold text-button_color">ASSOCHAM</span>
+            <span className="text-2xl font-bold text-button_color">
+              ASSOCHAM
+            </span>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -89,7 +91,7 @@ function PlacementSection() {
         className="relative h-1/2 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
-            'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072")',
+            'url("https://res.cloudinary.com/dhkemgng9/image/upload/v1741243666/bg_np7yh8.avif")',
         }}
       >
         <div className="absolute inset-0 bg-black/80" />

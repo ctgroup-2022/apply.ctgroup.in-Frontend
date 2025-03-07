@@ -24,7 +24,7 @@ const Explorecollege = React.lazy(() => import("./components/Explorecollege"));
 const AcademicDisciplines = React.lazy(() =>
   import("./components/Academic-disciplines")
 );
-const LogoSlider = React.lazy(() => import("./components/pages/LogoSlider"));
+
 
 function App() {
   return (

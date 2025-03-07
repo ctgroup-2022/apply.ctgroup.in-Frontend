@@ -1,5 +1,5 @@
 import React from "react";
-import Mobile from "../../assets/Images/Mobile.mp4";
+
 
 const BackgroundSlider = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -15,7 +15,7 @@ const BackgroundSlider = () => {
   const mediaContent = [
     {
       type: "video",
-      url: Mobile
+      url: "https://res.cloudinary.com/dhkemgng9/video/upload/v1741243057/Mobile_ynhlgp.mp4",
     },
   ];
 

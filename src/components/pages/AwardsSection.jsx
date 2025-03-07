@@ -1,9 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./AS.css";
-import naac from "../../assets/Images/naac.jpg";
-import two from "../../img/2.jpg";
-import third from "../../img/3.jpg";
 
 // Animation Variants (Optimized to Avoid Re-Creation)
 const textVariants = {
@@ -24,7 +21,8 @@ const awardsData = [
       "Received the prestigious Sir Viswesvaraya Award for ‘Best Corporate Entity’ at TechKnow '22",
       "Won Sonatype Partner Award",
     ],
-    image: naac,
+    image:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243056/naac_tjpfbm.jpg",
     width: 600,
     height: 400,
   },
@@ -34,7 +32,8 @@ const awardsData = [
       "RETINA360 wins 'Digital Technology of the Year: Big Data, IT & Analytics' Award at IWEF 2021",
       "HR team wins ‘Best Business Communication’ Award at Corporate Communication Excellence Awards",
     ],
-    image: two,
+    image:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243087/2_c0dbji.jpg",
     width: 600,
     height: 400,
   },
@@ -45,7 +44,8 @@ const awardsData = [
       "rt360 wins ETBFSI Excellence Awards",
       "retina360 wins Digital Technology of the Year at IWEF",
     ],
-    image: third,
+    image:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243086/3_czwymb.jpg",
     width: 600,
     height: 400,
   },

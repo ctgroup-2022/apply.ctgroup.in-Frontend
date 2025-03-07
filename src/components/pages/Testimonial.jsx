@@ -1,17 +1,33 @@
 import React, { useEffect, useState, useRef } from "react";
-import testi1 from "../../assets/Images/pngstu/1.png";
-import testi2 from "../../assets/Images/pngstu/2.png";
-import testi3 from "../../assets/Images/pngstu/3.png";
+
 import { motion } from "framer-motion";
 
 const Testimonial = () => {
   const images = [
-    { id: 1, src: testi1 },
-    { id: 2, src: testi2 },
-    { id: 3, src: testi3 },
-    { id: 4, src: testi1 },
-    { id: 5, src: testi2 },
-    { id: 6, src: testi3 },
+    {
+      id: 1,
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/3_w6m0to.png",
+    },
+    {
+      id: 2,
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/2_wpqthd.png",
+    },
+    {
+      id: 3,
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/1_s39mfo.png",
+    },
+    {
+      id: 4,
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/3_w6m0to.png",
+    },
+    {
+      id: 5,
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/2_wpqthd.png",
+    },
+    {
+      id: 6,
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/1_s39mfo.png",
+    },
   ];
 
   const [cardsToShow, setCardsToShow] = useState(3);

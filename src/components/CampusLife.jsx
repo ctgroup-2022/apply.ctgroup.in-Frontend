@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { X, GraduationCap, Users, Palette, FlaskConical } from "lucide-react";
 
-// Import hero images
-import hero1 from "../assets/Images/CampusLife/hero1.jpg";
-import hero2 from "../assets/Images/CampusLife/hero2.jpg";
-import hero3 from "../assets/Images/audi.jpg";
-
-// Import grid images
-import computerLab from "../assets/Images/CampusLife/gym.jpg";
-import civilEngineering from "../assets/Images/CampusLife/canteen.jpg";
-import culturalStudies from "../assets/Images/CampusLife/sports.jpg";
-import chemistryLab from "../assets/Images/CampusLife/audi.jpg";
-import researchFacilities from "../assets/Images/CampusLife/cult.jpg";
-import engineeringWorkshop from "../assets/Images/CampusLife/work.jpg";
-
 // Image data
-const heroImages = [hero1, hero2, hero3];
+const heroImages = [
+  "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/audi_hcpvmu.jpg",
+  "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/hero2_mb8dnx.jpg",
+  "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/hero1_oejtyu.jpg",
+];
 
 const features = [
   {
@@ -43,7 +34,7 @@ const features = [
 const gridImages = [
   {
     id: 1,
-    url: computerLab,
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/gym_zpxm4q.jpg",
     title: "GYM & Fitness",
     description:
       "Modern fitness center equipped with state-of-the-art equipment for physical wellness, including cardio machines, weight training area, and dedicated workout spaces.",
@@ -51,7 +42,7 @@ const gridImages = [
   },
   {
     id: 2,
-    url: civilEngineering,
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243020/canteen_azuvdh.jpg",
     title: "Canteen",
     description:
       "Spacious and hygienic cafeteria serving fresh, nutritious meals with diverse menu options, comfortable seating, and a welcoming atmosphere for students and staff.",
@@ -59,7 +50,7 @@ const gridImages = [
   },
   {
     id: 3,
-    url: culturalStudies,
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243024/sports_fqzkwq.jpg",
     title: "Sports",
     description:
       "Comprehensive sports facilities including indoor and outdoor courts, playing fields, and training areas for various sports activities and competitions.",
@@ -67,7 +58,7 @@ const gridImages = [
   },
   {
     id: 4,
-    url: chemistryLab,
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243020/audi_zdx3et.jpg",
     title: "Auditorium",
     description:
       "State-of-the-art auditorium with excellent acoustics, modern audio-visual systems, and comfortable seating for events, performances, and large gatherings.",
@@ -75,7 +66,7 @@ const gridImages = [
   },
   {
     id: 5,
-    url: researchFacilities,
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/cult_unskh9.jpg",
     title: "Cultural Fest",
     description:
       "Annual cultural festival showcasing student talents through performances, exhibitions, and celebrations, fostering creativity and cultural exchange.",
@@ -83,7 +74,7 @@ const gridImages = [
   },
   {
     id: 6,
-    url: engineeringWorkshop,
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243024/work_ammeuh.jpg",
     title: "Workshop",
     description:
       "Well-equipped workshop facility with modern tools and machinery for hands-on technical training and practical project development.",

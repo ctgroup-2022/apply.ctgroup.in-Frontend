@@ -1,12 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo1 from "../../assets/Images/logo 1.png";
-import Logo2 from "../../assets/Images/logo 2.png";
-import Logo3 from "../../assets/Images/logo 3.png";
-import Logo4 from "../../assets/Images/logo 4.png";
-import Logo5 from "../../assets/Images/logo 5.png";
-import Logo6 from "../../assets/Images/logo 6.png";
-import Logo7 from "../../assets/Images/logo 7.png";
+ 
 
 const Marquee = ({ images, direction }) => {
   return (
@@ -33,21 +27,13 @@ const Marquee = ({ images, direction }) => {
 
 const Recruiters = () => {
   const logos = [
-    Logo1,
-    Logo2,
-    Logo3,
-    Logo4,
-    Logo5,
-    Logo6,
-    Logo7,
-    Logo1,
-    Logo2,
-    Logo3,
-    Logo4,
-    Logo5,
-    Logo6,
-    Logo7,
- 
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243044/Logo_1_e4qiz7.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243044/Logo_2_tj4v9c.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243046/Logo_3_f72yzr.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243052/Logo_4_ipeal1.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243053/Logo_5_yv6xso.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243053/logo_6_twvkrs.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243053/Logo_7_vdchcv.png",
   ];
 
   return (

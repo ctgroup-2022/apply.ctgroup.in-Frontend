@@ -2,10 +2,6 @@ import { useRef } from "react";
 import { motion, useAnimation } from "framer-motion"; // Import Framer Motion
 import "../../App.css";
 import FeaturesPage from "../FeaturesPage";
-import audiImage from "../../assets/Images/audi.jpg";
-import nccImage from "../../assets/Images/ncc.jpg";
-import cultureImage from "../../assets/Images/culture.jpg";
-import ctgroup2Image from "../../assets/Images/ctgroup2.jpg";
 import AboutSection from "./AboutSection";
 
 export default function Scroll() {
@@ -15,7 +11,9 @@ export default function Scroll() {
     <main
       ref={container}
       className="relative min-h-[150vh]  overflow-hidden"
-      style={{ backgroundImage: `url(${audiImage})` }}
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/audi_hcpvmu.jpg")`,
+      }}
     >
       <div className="absolute inset-0 bg-black opacity-80"></div>
       <Section1 />

@@ -1,12 +1,8 @@
 "use client";
 import { ReactLenis } from "lenis/react";
 import React from "react";
-// import LogoSlider from "./LogoSlider";
 import Recruiters from "./Recruiters";
-import stu1 from "../../assets/Images/pngstu/Puneet.png";
-import stu3 from "../../assets/Images/pngstu/Suneha.png";
-import stu4 from "../../assets/Images/pngstu/girl.png";
-import stu2 from "../../assets/Images/pngstu/Harbaldeep_singh.png";
+
 
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
@@ -23,25 +19,25 @@ export default function StickyScroll() {
       title: "John Doe",
       description:
         "John Doe secured a 20 LPA package at a top multinational company. His dedication and hard work have truly paid off.",
-      url: stu3,
+      url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243069/Suneha_iiyd8b.png",
     },
     {
       title: "Jane Smith",
       description:
         "Jane Smith achieved an impressive 9 band score in IELTS, showcasing her exceptional language proficiency.",
-      url: stu1,
+      url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243069/Puneet_it5foc.png",
     },
     {
       title: "Rahul Sharma",
       description:
         "Our student Rahul Sharma has made us proud by playing international cricket, representing our country on a global stage.",
-      url: stu4,
+      url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243069/Harbaldeep_singh_c3y9o4.png",
     },
     {
       title: "Anita Verma",
       description:
         "Anita Verma has mesmerized audiences with her singing talent, performing at various national and international events.",
-      url: stu2,
+      url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243065/girl_qidkz3.png",
     },
   ];
 

@@ -11,11 +11,7 @@ import {
 } from "../core/image-tab";
 import { MdArrowForward } from "react-icons/md";
 import ScrollElement from "../core/scroll-element";
-import shahpur from "../../assets/Images/shahpur.jpeg";
-import apply from "../../assets/Images/apply.png";
-import ct1 from "../../assets/Images/ct1.jpeg";
-import admission from "../../assets/Images/admission.png";
-import hostel from "../../assets/Images/hostel.png";
+
 
 const tabs = [
   {
@@ -23,42 +19,48 @@ const tabs = [
     id: "improve",
     description:
       "CT Group offers a wide range of undergraduate, postgraduate, and diploma programs in various fields including Engineering, Management, Computer Science, Law, Pharmacy, and Commerce.",
-    imageUrl: shahpur,
+    imageUrl:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243030/ctgroup_pvutzn.jpg",
   },
   {
     title: "How can I apply to CT Group?",
     id: "important",
     description:
       "You can apply to CT Group through our online application portal. Visit our website and fill out the application form. You will need to upload your academic documents and recent photographs.",
-    imageUrl: apply,
+    imageUrl:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/apply_dvkwec.png",
   },
   {
     title: "What are the eligibility criteria for admission?",
     id: "same",
     description:
       "The eligibility criteria depend on the course you are applying for. Please visit the respective program page for detailed information. Generally, a minimum percentage in your previous qualification is required to be eligible for admission.",
-    imageUrl: ct1,
+    imageUrl:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243030/ctgroup_pvutzn.jpg",
   },
   {
     title: "Are there any scholarships available?",
     id: "imp",
     description:
       "Yes, CT Group offers scholarships to meritorious students based on academic performance, financial need, and other criteria. For more information, visit the scholarship page on our website.",
-    imageUrl: admission,
+    imageUrl:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/admission_olxhvy.png",
   },
   {
     title: "What are the hostel facilities at CT Group?",
     id: "import",
     description:
       "CT Group provides separate hostel facilities for boys and girls with modern amenities such as Wi-Fi, 24/7 electricity backup, water supply, and recreational areas. Please contact the hostel office for further details.",
-    imageUrl: hostel,
+    imageUrl:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243044/hostel_d6mhmu.png",
   },
   {
     title: "How is the placement assistance at CT Group?",
     id: "sames",
     description:
       "CT Group has a dedicated placement cell that works tirelessly to secure job opportunities for students. We have collaborations with top companies, and our students have been successfully placed in reputed organizations.",
-    imageUrl: admission,
+    imageUrl:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/admission_olxhvy.png",
   },
 ];
 

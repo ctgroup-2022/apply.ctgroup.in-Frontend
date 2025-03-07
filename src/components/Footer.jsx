@@ -1,14 +1,18 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import Logo from "../assets/Images/Navbar/logo1.webp";
-import NaacLogo from "../assets/Images/Navbar/naaclogo.webp";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 
 const socialLinks = [
-  { Icon: FaFacebookF, link: "#", label: "Facebook" },
-  { Icon: FaInstagram, link: "#", label: "Instagram" },
-  { Icon: FaTwitter, link: "#", label: "Twitter" },
-  { Icon: FaLinkedinIn, link: "#", label: "LinkedIn" },
-  { Icon: FaYoutube, link: "#", label: "YouTube" },
+  { Icon: FaFacebookF, label: "Facebook" },
+  { Icon: FaInstagram, label: "Instagram" },
+  { Icon: FaTwitter, label: "Twitter" },
+  { Icon: FaLinkedinIn, label: "LinkedIn" },
+  { Icon: FaYoutube, label: "YouTube" },
 ];
 
 const Footer = () => {
@@ -17,22 +21,22 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         {/* Left Section */}
         <div className="md:w-1/3 flex flex-col items-start">
-          <a href="/" className="flex items-center mb-4">
+          <div className="flex items-center mb-4 pointer-events-none">
             <img
-              src={Logo}
+              src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243057/logo1_vrfikm.webp"
               alt="CT Logo"
               loading="lazy"
               className="h-10 lg:h-14"
             />
-          </a>
-          <a href="/" className="flex items-center mb-4">
+          </div>
+          <div className="flex items-center mb-4 pointer-events-none">
             <img
-              src={NaacLogo}
+              src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243057/naaclogo_ft9fe6.webp"
               alt="NAAC Logo"
               loading="lazy"
               className="h-20 lg:h-24"
             />
-          </a>
+          </div>
           <p className="text-xs sm:text-sm leading-relaxed">
             CT Group of Institutions is renowned for its exceptional academic
             programs, providing top-tier education in both undergraduate and
@@ -47,24 +51,21 @@ const Footer = () => {
             Urban Estate Phase 2, Pratappura Road, Near Lambra, Shahpur,
             Jalandhar, Punjab 144020
           </address>
-          <p className="text-xs sm:text-sm mb-2">
-            📞 <a href="tel:18001372227" className="underline text-text_color">1800-137-2227</a>, <a href="tel:+911815055127" className="underline text-text_color">+91-181-5055127</a>
+          <p className="text-xs sm:text-sm mb-2 pointer-events-none select-none">
+            📞 1800-137-2227, +91-181-5055127
           </p>
-          <p className="text-xs sm:text-sm mb-4">
-            ✉ <a href="mailto:info@ctgroup.in" className="underline text-text_color">info@ctgroup.in</a>
+          <p className="text-xs sm:text-sm mb-4 pointer-events-none select-none">
+            ✉ info@ctgroup.in
           </p>
-          <div className="flex space-x-3">
-            {socialLinks.map(({ Icon, link, label }, index) => (
-              <a
+          <div className="flex space-x-3 pointer-events-none">
+            {socialLinks.map(({ Icon, label }, index) => (
+              <div
                 key={index}
-                href={link}
                 aria-label={label}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-gray-100 text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
+                className="p-2 bg-gray-100 text-primary rounded-full"
               >
                 <Icon />
-              </a>
+              </div>
             ))}
           </div>
         </div>
