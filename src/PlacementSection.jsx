@@ -13,27 +13,34 @@ function PlacementSection() {
         "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243063/place5_n2orvu.png",
       name: "Alumni 1",
       role: "Role 1",
+      width: 300, // Set explicit width
+      height: 400, // Set explicit height
     },
     {
       image:
         "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/place6_tlzxrk.png",
       name: "Alumni 2",
       role: "Role 2",
+      width: 300, // Set explicit width
+      height: 400, // Set explicit height
     },
     {
       image:
         "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243059/place1_dye2cl.png",
       name: "Alumni 3",
       role: "Role 3",
+      width: 300, // Set explicit width
+      height: 400, // Set explicit height
     },
     {
       image:
         "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243060/place2_jjdumd.png",
       name: "Alumni 4",
       role: "Role 4",
+      width: 300, // Set explicit width
+      height: 400, // Set explicit height
     },
   ];
-
 
   return (
     <div>
@@ -116,6 +123,8 @@ function PlacementSection() {
                     <img
                       src={person.image}
                       alt={person.name}
+                      width={person.width}
+                      height={person.height}
                       className="object-cover"
                     />
                   </div>

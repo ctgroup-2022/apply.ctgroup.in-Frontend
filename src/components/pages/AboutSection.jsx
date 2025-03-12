@@ -69,7 +69,7 @@ export default function AboutSection() {
               About Us
             </h1>
 
-            <div className="mb-8 space-y-6 text-lg leading-relaxed text-dark_red_text">
+            <div className="mb-8 space-y-6 text-lg leading-relaxed text-dark_text">
               <p>
                 We started back in 1997 with a motive to solve all the dental
                 problems and give our patients an opportunity to smile brighter.

@@ -212,7 +212,6 @@ export default function SignUpForm() {
         campus: "",
         course: "",
       });
-
     } catch (error) {
       console.error("Error:", error);
       // Show error message

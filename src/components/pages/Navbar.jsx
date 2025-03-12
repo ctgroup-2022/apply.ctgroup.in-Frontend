@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed w-full top-0 z-[9999] bg-white/20 backdrop-blur-lg border border-white/10 shadow-lg max-sm:bg-primary">
+    <nav className="fixed w-full top-0 z-[9999] bg-primary/90 backdrop-blur-lg border border-white/10 shadow-lg max-sm:bg-primary/90">
       <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20">
         {/* Logo */}
         <a href="/" className="flex items-center">
@@ -34,14 +34,14 @@ const Navbar = () => {
             alt="CT Logo"
             width="150"
             height="80"
-            className="w-[180px] h-[80px] object-contain"
+            className="w-[190px] h-[80px] object-contain pr-4"
           />
           <img
-            src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243057/naaclogo_ft9fe6.webp"
+            src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741409254/frame_fqf37l.png"
             alt="Naac"
             width="150"
             height="80"
-            className="w-[150px] h-[90px] object-contain"
+            className="w-[150px] h-[80px] object-contain"
           />
         </a>
 
