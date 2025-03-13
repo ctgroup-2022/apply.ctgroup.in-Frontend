@@ -26,8 +26,8 @@ export default function AboutSection() {
               <div className="relative z-10 overflow-hidden rounded-2xl bg-white p-2 shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                 <div className="aspect-[4/3] overflow-hidden rounded-xl">
                   <img
-                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243037/culture_dybfpe.jpg"
-                    alt="Dental professional"
+                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741849664/IMG_8611_otl8nw.webp"
+                    alt="College"
                     width={800}
                     height={600}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -39,8 +39,8 @@ export default function AboutSection() {
               <div className="absolute -bottom-12 -right-12 z-20 hidden w-48 overflow-hidden rounded-xl bg-white p-1 shadow-lg transition-transform duration-300 hover:scale-105 lg:block">
                 <div className="aspect-square overflow-hidden rounded-lg">
                   <img
-                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/audi_hcpvmu.jpg"
-                    alt="Dental procedure"
+                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741849663/IMG_8592_hhsaiy.webp"
+                    alt="College"
                     width={400}
                     height={400}
                     className="h-full w-full object-cover"
