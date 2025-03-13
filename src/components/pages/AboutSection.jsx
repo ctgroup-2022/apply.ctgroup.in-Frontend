@@ -69,18 +69,42 @@ export default function AboutSection() {
               About Us
             </h1>
 
-            <div className="mb-8 space-y-6 text-lg leading-relaxed text-dark_text">
+            <div className="mb-8 space-y-6 text-md leading-6 text-dark_text text-justify ">
               <p>
-                We started back in 1997 with a motive to solve all the dental
-                problems and give our patients an opportunity to smile brighter.
-                Our specialists are counted among the best dentists in London
-                and in the UK.
+                CT Group of Institutions, Shahpur Campus, guarantees 100%
+                placement assistance and endless career opportunities. Whether
+                you aspire to secure your dream job, become an entrepreneur, or
+                pursue research, CT Shahpur is your gateway to success. Our NAAC
+                ‘A’ Grade accredited CT Institute of Engineering, Management &
+                Technology (CTIEMT) ensures top-quality education, blending
+                industry-ready skills, hands-on training, and practical exposure
+                to help you excel in today’s competitive world.
               </p>
               <p>
-                Each one of them holds prestigious awards by organisations
-                including American Dental Association, and The Dentistry award.
-                Within our 20+ years of experience, we have helped over 12000
-                patients to restore their smile and enhance their confidence.
+                <ul>
+                  <li>
+                    ✔ Accomplished Doctoral Faculty and Expert Industry Mentors
+                  </li>
+                  <li>✔ Cutting-edge Labs & Tech-Enabled Classrooms</li>
+                  <li>✔ Future Skills Training & Certifications</li>
+                  <li>✔ Global Exposure Programs & Industry Internships</li>
+                  <li>✔ 100% Placement Support & Career Guidance</li>
+                  <li>✔ Personality Development & Soft Skills Enhancement</li>
+                  <li>✔ Vibrant Campus Life with Cultural Fests & Events</li>
+                  <li>✔ Entrepreneurship & Innovation Cells</li>
+                </ul>
+              </p>
+              <p>
+                At CT Shahpur, education goes beyond books, shaping you into a
+                global leader. With cutting-edge labs, research opportunities,
+                and a vibrant campus life, we blend academic excellence with
+                dynamic experiences. Join the CT family, where innovation meets
+                opportunity, and dreams become reality.
+                <br />
+                <br />
+                <span className="text-lg mt-8">
+                  🔹 Ready for the future? 🔹 Ready for CT Shahpur
+                </span>
               </p>
             </div>
 
@@ -98,7 +122,7 @@ export default function AboutSection() {
             </blockquote> */}
 
             {/* Stats */}
-            <div className="mb-12 grid grid-cols-2 gap-8 sm:grid-cols-3">
+            {/* <div className="mb-12 grid grid-cols-2 gap-8 sm:grid-cols-3">
               <div>
                 <p className="text-3xl font-bold text-primary">20+</p>
                 <p className="mt-1 text-sm text-dark_red_text">
@@ -117,7 +141,7 @@ export default function AboutSection() {
                   Expert Dentists
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* CTA Button */}
           </motion.div>

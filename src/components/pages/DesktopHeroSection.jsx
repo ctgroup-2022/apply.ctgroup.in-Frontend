@@ -56,7 +56,7 @@ function DesktopHeroSection() {
               />
             </div>
 
-            <div className="relative z-10 pt-40">
+            <div className="relative z-10 pt-40 ">
               <React.Suspense fallback={<div>Loading form...</div>}>
                 <SignUpForm />
               </React.Suspense>

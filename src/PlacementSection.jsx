@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion"; // Import Framer Motion
 import { Award } from "lucide-react";
-import CounterSection from "./counter-section";
+// import CounterSection from "./counter-section";
 
 function PlacementSection() {
   const leftControls = useAnimation();
@@ -68,7 +68,7 @@ function PlacementSection() {
           <motion.div className="md:w-2/3 p-14 bg-black/30 backdrop-blur-sm rounded-xl text-center text-text_color">
             <h4 className="text-2xl font-bold mb-4">We have</h4>
             <div className="text-4xl md:text-5xl font-bold text-button_color mb-4">
-              2,200+ Recruiters
+              1800+ Recruiters
             </div>
             <p className="text-2xl mb-4">
               Ready to Provide You with the Best Job Offers With up to
@@ -78,7 +78,7 @@ function PlacementSection() {
             </div>
             <p className="text-lg mb-4">and average packages of</p>
             <div className="text-3xl md:text-5xl font-bold text-button_color">
-              7-8 LPA
+              <span>7 - 8 LPA</span>
             </div>
           </motion.div>
           <motion.div className="md:w-1/3 bg-black/30 backdrop-blur-sm rounded-xl p-10 text-center text-text_color">
@@ -94,7 +94,7 @@ function PlacementSection() {
       </motion.div>
 
       {/* Alumni Section */}
-      <motion.div
+      {/* <motion.div
         className="relative h-1/2 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
@@ -133,7 +133,7 @@ function PlacementSection() {
             </motion.div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

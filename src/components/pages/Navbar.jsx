@@ -34,14 +34,14 @@ const Navbar = () => {
             alt="CT Logo"
             width="150"
             height="80"
-            className="w-[190px] h-[80px] object-contain pr-4"
+            className="w-[190px] h-[80px] max-[420px]:h-[40px] max-[375px]:h-[30px] object-contain pr-4 max-[420px]:pr-2"
           />
           <img
             src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741409254/frame_fqf37l.png"
             alt="Naac"
             width="150"
             height="80"
-            className="w-[150px] h-[80px] object-contain"
+            className="w-[150px] h-[80px] max-[420px]:h-[30px] object-contain"
           />
         </a>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-3 text-text_color transition"
+          className="md:hidden p-2  text-text_color transition"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}

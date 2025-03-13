@@ -223,7 +223,7 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="flex items-center justify-center p-4 overflow-hidden min-h-screen">
+    <div className="flex items-center justify-center p-4 overflow-hidden min-h-screen main-[1700px]:h-full">
       <div className="w-full max-w-md p-2">
         <div
           className={`rounded-2xl p-6 transition-all duration-500 backdrop-blur-xl relative ${
