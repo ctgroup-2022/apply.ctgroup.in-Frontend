@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
- 
+
 
 const Marquee = ({ images, direction }) => {
   return (
@@ -27,13 +27,27 @@ const Marquee = ({ images, direction }) => {
 
 const Recruiters = () => {
   const logos = [
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243044/Logo_1_e4qiz7.png",
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243044/Logo_2_tj4v9c.png",
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243046/Logo_3_f72yzr.png",
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243052/Logo_4_ipeal1.png",
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243053/Logo_5_yv6xso.png",
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243053/logo_6_twvkrs.png",
-    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243053/Logo_7_vdchcv.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847202/paytm_sl5ole.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847202/paytm_sl5ole.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847201/indigo_lfifwa.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847201/ibm_oteyig.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847200/f13_jbmtax.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847200/f12_fbrslx.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847200/f11_rqy1ai.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847199/f10_uhchux.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847199/f9_fugxyj.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847199/f8_prkvrm.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847198/f7_ioqifi.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847198/f6_spfkf8.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847198/f5_jwte5q.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847197/f4_jty1zo.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847197/f3_whdhje.png",
+
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847196/f1_bwnn9b.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847195/airtel_ncgiqi.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847195/coca-cola_pt2wax.png",
+
+
   ];
 
   return (
