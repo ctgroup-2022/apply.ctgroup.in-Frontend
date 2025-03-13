@@ -31,10 +31,11 @@ const Footer = () => {
           </div>
           <div className="flex items-center mb-4 pointer-events-none">
             <img
-              src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741409254/frame_fqf37l.png"
+              src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741841796/naac_qpf9xh.png"
               alt="NAAC Logo"
               loading="lazy"
-              className="h-8 lg:h-8"
+              width='100'
+          
             />
           </div>
           <p className="text-xs sm:text-sm leading-relaxed">

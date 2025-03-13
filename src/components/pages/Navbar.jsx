@@ -1,8 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense, useCallback } from "react";
-import {
-  Menu,
-  X,
-} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import NavLink from "./navigation/Navlink";
 const CourseSection = lazy(() => import("./navigation/CourseSection"));
 
@@ -29,20 +26,22 @@ const Navbar = () => {
       <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20">
         {/* Logo */}
         <a href="/" className="flex items-center">
-          <img
-            src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243057/logo1_vrfikm.webp"
-            alt="CT Logo"
-            width="150"
-            height="80"
-            className="w-[190px] h-[80px] max-[420px]:h-[40px] max-[375px]:h-[30px] object-contain pr-4 max-[420px]:pr-2"
-          />
-          <img
-            src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741409254/frame_fqf37l.png"
-            alt="Naac"
-            width="150"
-            height="80"
-            className="w-[150px] h-[80px] max-[420px]:h-[30px] object-contain"
-          />
+          <div className="flex items-center gap-4">
+            <div>
+              <img
+                src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243057/logo1_vrfikm.webp"
+                alt="CT Logo"
+                className="w-[150px] h-auto object-contain"
+              />
+            </div>
+            <div>
+              <img
+                src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741841796/naac_qpf9xh.png"
+                alt="Naac"
+                className="w-[70px] h-auto object-contain"
+              />
+            </div>
+          </div>
         </a>
 
         {/* Desktop Menu */}
@@ -58,7 +57,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2  text-text_color transition"
+          className="md:hidden p-2 text-text_color transition"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
