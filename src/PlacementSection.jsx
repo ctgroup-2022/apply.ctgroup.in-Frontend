@@ -83,12 +83,12 @@ function PlacementSection() {
           </motion.div>
           <motion.div className="md:w-1/3 bg-black/30 backdrop-blur-sm rounded-xl p-10 text-center text-text_color">
             <Award className="w-12 h-12 mx-auto mb-4 text-button_color" />
-            <h4 className="text-2xl font-bold mb-2">Awarded as the</h4>
-            <h5 className="text-2xl font-bold mb-2">Best University in</h5>
-            <h6 className="text-2xl font-bold mb-2">placements by</h6>
-            <span className="text-2xl font-bold text-button_color">
+            <h4 className="text-2xl font-bold mb-2">CTIEMT Awarded</h4>
+            <h5 className="text-2xl font-bold mb-2">as</h5>
+            <h6 className="text-2xl font-bold mb-2">NAAC Grade A</h6>
+            {/* <span className="text-2xl font-bold text-button_color">
               ASSOCHAM
-            </span>
+            </span> */}
           </motion.div>
         </motion.div>
       </motion.div>
