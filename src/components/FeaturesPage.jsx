@@ -61,7 +61,7 @@ function FeaturePage() {
       description: "World-class education with distinguished faculty",
       color: "text_color",
       image:
-        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243023/hero1_oejtyu.jpg",
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741849494/Academic_Excellence_wmyvv9.webp",
     },
     {
       icon: BookOpen,
@@ -69,7 +69,7 @@ function FeaturePage() {
       description: "Cutting-edge research facilities and programs",
       color: "text_color",
       image:
-        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243036/cttech_qjmjqp.jpg",
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741849516/Research_f86oxs.webp",
     },
     {
       icon: Users,
@@ -77,7 +77,7 @@ function FeaturePage() {
       description: "Vibrant campus community and activities",
       color: "text_color",
       image:
-        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243036/ctlab_lhcl0t.jpg",
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741849500/Student_Life_fb0qcm.webp",
     },
     {
       icon: Trophy,
@@ -89,11 +89,11 @@ function FeaturePage() {
     },
     {
       icon: Globe,
-      title: "Global Perspective",
-      description: "International programs and diverse community",
+      title: "Library",
+      description: "Extensive library resources and services",
       color: "text_color",
       image:
-        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243029/ctevent_jzhfzk.jpg",
+        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741849517/Library_kz4npg.webp",
     },
     {
       icon: Microscope,
@@ -101,7 +101,7 @@ function FeaturePage() {
       description: "State-of-the-art labs and technology centers",
       color: "text_color",
       image:
-        "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243029/ctevent_jzhfzk.jpg",
+        "https://res.cloudinary.com/dhkemgng9/image/upload/t_Banner 16:9/v1741849494/Inovation_Hub_fbmnmv.webp",
     },
   ];
 
