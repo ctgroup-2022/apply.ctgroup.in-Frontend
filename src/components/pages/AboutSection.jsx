@@ -26,7 +26,7 @@ export default function AboutSection() {
               <div className="relative z-10 overflow-hidden rounded-2xl bg-white p-2 shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                 <div className="aspect-[4/3] overflow-hidden rounded-xl">
                   <img
-                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741849664/IMG_8611_otl8nw.webp"
+                    src="https://res.cloudinary.com/dhkemgng9/image/upload/v1742016649/audi_ehgjj2.webp"
                     alt="College"
                     width={800}
                     height={600}
@@ -94,7 +94,7 @@ export default function AboutSection() {
                   <li>✔ Entrepreneurship & Innovation Cells</li>
                 </ul>
               </p>
-              <p>
+              {/* <p>
                 At CT Shahpur, education goes beyond books, shaping you into a
                 global leader. With cutting-edge labs, research opportunities,
                 and a vibrant campus life, we blend academic excellence with
@@ -105,7 +105,7 @@ export default function AboutSection() {
                 <span className="text-lg mt-8">
                   🔹 Ready for the future? 🔹 Ready for CT Shahpur
                 </span>
-              </p>
+              </p> */}
             </div>
 
             {/* Quote */}

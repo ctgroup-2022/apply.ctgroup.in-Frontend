@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const SignUpForm = React.lazy(() => import("./SignUpForm"));
+import SignUpForm from "./SignUpForm";
 
 function DesktopHeroSection() {
   const [videoLoaded, setVideoLoaded] = useState(false);

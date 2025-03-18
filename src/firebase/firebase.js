@@ -25,8 +25,9 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 
+// Disable app verification for testing environments
 if (process.env.NODE_ENV === "development") {
-  auth.settings.appVerificationDisabledForTesting = false;
+  auth.settings.appVerificationDisabledForTesting = true;
 }
 
 

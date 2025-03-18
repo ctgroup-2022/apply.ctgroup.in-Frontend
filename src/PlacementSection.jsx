@@ -66,26 +66,26 @@ function PlacementSection() {
         </motion.div>
         <motion.div className="relative z-10 flex flex-col md:flex-row justify-between items-center min-h-[50vh] max-w-7xl mx-auto gap-10 p-9">
           <motion.div className="md:w-2/3 p-14 bg-black/30 backdrop-blur-sm rounded-xl text-center text-text_color">
-            <h4 className="text-2xl font-bold mb-4">We have</h4>
+            <h4 className="text-4xl font-bold mb-4">We have</h4>
             <div className="text-4xl md:text-5xl font-bold text-button_color mb-4">
               1800+ Recruiters
             </div>
-            <p className="text-2xl mb-4">
+            <p className="text-3xl mb-4">
               Ready to Provide You with the Best Job Offers With up to
             </p>
             <div className="text-3xl md:text-5xl font-bold text-button_color mb-4">
               51 Lakhs Highest Package
             </div>
-            <p className="text-lg mb-4">and average packages of</p>
-            <div className="text-3xl md:text-5xl font-bold text-button_color">
+            <p className="text-3xl mb-4">and average packages of</p>
+            <div className="text-4xl md:text-5xl font-bold text-button_color">
               <span>7 - 8 LPA</span>
             </div>
           </motion.div>
           <motion.div className="md:w-1/3 bg-black/30 backdrop-blur-sm rounded-xl p-10 text-center text-text_color">
             <Award className="w-12 h-12 mx-auto mb-4 text-button_color" />
-            <h4 className="text-2xl font-bold mb-2">CTIEMT Awarded</h4>
-            <h5 className="text-2xl font-bold mb-2">as</h5>
-            <h6 className="text-2xl font-bold mb-2">NAAC Grade A</h6>
+            <h4 className="text-3xl font-bold mb-2">CTIEMT Awarded</h4>
+            <h5 className="text-3xl font-bold mb-2">as</h5>
+            <h6 className="text-3xl font-bold mb-2">NAAC Grade A</h6>
             {/* <span className="text-2xl font-bold text-button_color">
               ASSOCHAM
             </span> */}

@@ -51,7 +51,7 @@ const Recruiters = () => {
   ];
 
   return (
-    <div className="container mx-auto text-center text-3xl sm:text-5xl pt-20 pb-8 max-md:pt-8">
+    <div className="container mx-auto text-center text-3xl sm:text-5xl pt-20 pb-16 max-md:pt-8">
       <span className="text-primary font-bold">Recruiters at CT Group</span>
       <p className="text-center text-base sm:text-lg text-dark_text px-6 sm:px-16 md:px-32 lg:px-48 mt-4 font-bold">
         We'll help you get hired. Our team will work with you throughout the

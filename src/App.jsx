@@ -60,7 +60,9 @@ function App() {
           <CampusLife />
           <AwardsSection />
           <Testimonial />
-          <Explorecollege />
+          <div className="hidden md:block">
+            <Explorecollege />
+          </div>
           <FAQ />
         </main>
 

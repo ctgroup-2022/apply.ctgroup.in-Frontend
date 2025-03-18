@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense, useCallback } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import NavLink from "./navigation/Navlink";
 const CourseSection = lazy(() => import("./navigation/CourseSection"));
 
@@ -41,6 +41,7 @@ const Navbar = () => {
                 className="w-[70px] h-auto object-contain"
               />
             </div>
+            
           </div>
         </a>
 
@@ -52,6 +53,10 @@ const Navbar = () => {
             onClick={toggleCourseDropdown}
             className="bg-secondary text-text_color px-6 py-3 rounded-full text-xl"
           />
+          <a href="tel:18001372227" className="flex items-center text-text_color gap-1 hover:text-text_color transition-colors">
+            <Phone size={18} />
+            <span className="font-medium">Toll Free: 1800-137-2227</span>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -76,6 +81,10 @@ const Navbar = () => {
             }}
             className="bg-secondary px-4 py-2 rounded-full text-lg hover:bg-secondary transition"
           />
+          <a href="tel:18001372227" className="flex items-center text-text_color gap-1 mt-2 px-3 py-2 hover:text-secondary transition-colors">
+            <Phone size={18} />
+            <span className="font-medium">Toll Free: 1800-137-2227</span>
+          </a>
         </div>
       )}
 

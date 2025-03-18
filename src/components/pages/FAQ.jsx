@@ -66,7 +66,7 @@ const tabs = [
 
 function FAQ() {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white text-[#224e91]">
       <div className="relative flex flex-col items-center justify-center pb-8">
         <ScrollElement
           viewport={{ amount: 0.5 }}
@@ -111,7 +111,7 @@ function FAQ() {
                   alt={tab.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center text-white font-bold text-lg">
+                <div className="absolute inset-0 bg-[#224e91] bg-opacity-30 flex items-center justify-center text-white font-bold text-lg">
                   {tab.title}
                 </div>
               </div>
@@ -129,7 +129,7 @@ function FAQ() {
                 </div>
               </TabHeader>
               <TabDes value={tab.id}>
-                <p className="bg-[#F2F2F2] text-black p-3">{tab.description}</p>
+                <p className="bg-[#F2F2F2] text-[#224e91] p-3">{tab.description}</p>
                 <div className="block rounded-md overflow-hidden md:hidden">
                   <img
                     src={tab.imageUrl}

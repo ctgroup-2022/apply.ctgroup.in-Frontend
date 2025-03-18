@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-const SignUpForm = React.lazy(() => import("./SignUpForm"));
+import SignUpForm from "./SignUpForm";
 
 import BackgroundSlider from "./BackgroundSlider";
 import BackgroundSliderMobile from "./BackgroundSliderMobile";
