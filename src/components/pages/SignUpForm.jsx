@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Sun, Moon, Sparkles, X } from "lucide-react";
-import { db, collection, addDoc } from "../../firebase/firebase";
+import { db, collection, addDoc, serverTimestamp } from "../../firebase/firebase";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -198,9 +198,13 @@ export default function SignUpForm() {
         return;
       }
 
-      // Add the form data to Firebase Firestore
+      // Add the form data to Firebase Firestore with timestamp
       try {
-        await addDoc(collection(db, FORM_COLLECTION), formData);
+        const dataWithTimestamp = {
+          ...formData,
+          submissionDate: serverTimestamp() // Add server timestamp
+        };
+        await addDoc(collection(db, FORM_COLLECTION), dataWithTimestamp);
       } catch (firestoreError) {
         console.error("Firebase error:", firestoreError);
         // Continue with form submission even if Firestore fails

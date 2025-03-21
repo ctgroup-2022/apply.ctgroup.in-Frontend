@@ -31,7 +31,7 @@ const Navbar = () => {
               <img
                 src="https://res.cloudinary.com/dhkemgng9/image/upload/v1741243057/logo1_vrfikm.webp"
                 alt="CT Logo"
-                className="w-[150px] h-auto object-contain"
+                className="w-[160px] h-auto object-contain"
               />
             </div>
             <div>
