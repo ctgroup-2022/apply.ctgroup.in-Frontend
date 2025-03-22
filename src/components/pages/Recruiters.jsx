@@ -42,11 +42,20 @@ const Recruiters = () => {
     "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847198/f5_jwte5q.png",
     "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847197/f4_jty1zo.png",
     "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847197/f3_whdhje.png",
-
     "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847196/f1_bwnn9b.png",
     "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847195/airtel_ncgiqi.png",
     "https://res.cloudinary.com/dhkemgng9/image/upload/v1741847195/coca-cola_pt2wax.png",
-
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628954/hm-logo-1_ohwjcf.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628954/hm-logo-1_ohwjcf.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628954/HDFC_BANK_LOGO_cbblbq.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628941/upgrad-logo_udxyta.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628942/Videocon_logo.svg_m01oco.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628942/Byjus-Logo_vfjwuy.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628942/capgemini_x0tzc5.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628942/Axis_Bank-Logo.wine_paiotd.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628941/tommy-hilfiger-2-logo-png-transparent_nmyaeh.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628941/RADISSON_LOGO_dsqcm8.png",
+    "https://res.cloudinary.com/dhkemgng9/image/upload/v1742628941/standard_chartered_logo_atnizf.png",
 
   ];
 

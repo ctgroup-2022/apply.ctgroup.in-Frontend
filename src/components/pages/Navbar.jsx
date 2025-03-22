@@ -21,6 +21,23 @@ const Navbar = () => {
     setIsOpen((prev) => !prev);
   }, []);
 
+  // Function to scroll smoothly to a section
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const navbarHeight = 80; // Adjust based on navbar height
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      setIsOpen(false); // Close mobile menu if open
+    }
+  };
+
   return (
     <nav className="fixed w-full top-0 z-[9999] bg-primary/90 backdrop-blur-lg border border-white/10 shadow-lg max-sm:bg-primary/90">
       <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20">
@@ -41,7 +58,6 @@ const Navbar = () => {
                 className="w-[70px] h-auto object-contain"
               />
             </div>
-            
           </div>
         </a>
 
@@ -53,6 +69,18 @@ const Navbar = () => {
             onClick={toggleCourseDropdown}
             className="bg-secondary text-text_color px-6 py-3 rounded-full text-xl"
           />
+          <button
+            onClick={() => scrollToSection("about")}
+            className="text-text_color text-lg font-medium hover:text-secondary transition"
+          >
+            About
+          </button>
+          <button
+            onClick={() => scrollToSection("virtual-tour")}
+            className="text-text_color text-lg font-medium hover:text-secondary transition"
+          >
+            Virtual Tour
+          </button>
           <a href="tel:18001372227" className="flex items-center text-text_color gap-1 hover:text-text_color transition-colors">
             <Phone size={18} />
             <span className="font-medium">Toll Free: 1800-137-2227</span>
@@ -81,6 +109,18 @@ const Navbar = () => {
             }}
             className="bg-secondary px-4 py-2 rounded-full text-lg hover:bg-secondary transition"
           />
+          <MobileNavLink
+            href="#"
+            text="About"
+            onClick={() => scrollToSection("about")}
+            className="px-4 py-2 rounded-md text-lg"
+          />
+          <MobileNavLink
+            href="#"
+            text="Virtual Tour"
+            onClick={() => scrollToSection("virtual-tour")}
+            className="px-4 py-2 rounded-md text-lg"
+          />
           <a href="tel:18001372227" className="flex items-center text-text_color gap-1 mt-2 px-3 py-2 hover:text-secondary transition-colors">
             <Phone size={18} />
             <span className="font-medium">Toll Free: 1800-137-2227</span>
@@ -90,11 +130,7 @@ const Navbar = () => {
 
       {/* Preloaded Course Dropdown */}
       {isCourseLoaded && isCourseDropdownOpen && (
-        <Suspense
-          fallback={
-            <div className="text-center py-4 text-white">Loading...</div>
-          }
-        >
+        <Suspense fallback={<div className="text-center py-4 text-white">Loading...</div>}>
           <CourseSection
             isOpen={isCourseDropdownOpen}
             onClose={() => setIsCourseDropdownOpen(false)}

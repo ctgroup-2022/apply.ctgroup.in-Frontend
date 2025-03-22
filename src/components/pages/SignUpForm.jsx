@@ -514,7 +514,22 @@ export default function SignUpForm() {
           </div>
         </div>
       </Modal>
-      <ToastContainer className="mt-4" position="top-right" />
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ zIndex: 9999, marginTop: '80px' }}
+        toastStyle={{ 
+          background: isDarkMode ? '#1F2937' : '#fff',
+          color: isDarkMode ? '#F3F4F6' : '#1F2937'
+        }}
+      />
     </div>
   );
 }

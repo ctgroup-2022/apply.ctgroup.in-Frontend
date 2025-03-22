@@ -6,27 +6,27 @@ const Testimonial = () => {
   const images = [
     {
       id: 1,
-      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/3_w6m0to.png",
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742534712/3_c7bfjg.png",
     },
     {
       id: 2,
-      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/2_wpqthd.png",
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742534713/6_ibas0a.png",
     },
     {
       id: 3,
-      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/1_s39mfo.png",
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742534712/5_vutuha.png",
     },
     {
       id: 4,
-      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/3_w6m0to.png",
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742534711/1_ogylgb.png",
     },
     {
       id: 5,
-      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/2_wpqthd.png",
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742534711/2_bgcqjj.png",
     },
     {
       id: 6,
-      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243064/1_s39mfo.png",
+      src: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742534713/4_uvvrps.png",
     },
   ];
 

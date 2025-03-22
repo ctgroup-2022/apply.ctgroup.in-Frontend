@@ -2,6 +2,7 @@ import React, { useState, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Recruiters from "./components/pages/Recruiters";
+import Ranking from "./components/pages/Ranking";
 
 // Lazy load components
 const Navbar = React.lazy(() => import("./components/pages/Navbar"));
@@ -42,12 +43,14 @@ const HomePage = () => (
         <DesktopHeroSection />
       </div>
     </section>
+    <Ranking/>
 
     {/* Main Sections */}
     <main>
       <PlacementSection />
       <Scroll />
       <AcademicDisciplines />
+
 
       {/* Sticky and Logo Slider */}
       <div className="hidden min-[1000px]:block">

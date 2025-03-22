@@ -35,9 +35,9 @@ const gridImages = [
   {
     id: 1,
     url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/gym_zpxm4q.jpg",
-    title: "GYM & Fitness",
+    title: "LIBRARY",
     description:
-      "Modern fitness center equipped with state-of-the-art equipment for physical wellness, including cardio machines, weight training area, and dedicated workout spaces.",
+      "A resourceful space with a diverse collection of books, digital materials, and quiet study areas for research and learning.",
     size: "large",
     width: 600,
     height: 400,

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full h-full bg-gradient-to-br from-white to-blue-50/70 px-4 py-16 sm:px-6 lg:px-8">
+    <section className="relative w-full h-full bg-gradient-to-br from-white to-blue-50/70 px-4 py-16 sm:px-6 lg:px-8" id="about">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#224E91]/20 blur-3xl" />
