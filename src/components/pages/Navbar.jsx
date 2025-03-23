@@ -21,28 +21,34 @@ const Navbar = () => {
     setIsOpen((prev) => !prev);
   }, []);
 
-  // Function to scroll smoothly to a section
+  // Function to scroll smoothly to a section - enhanced for mobile
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const navbarHeight = 80; // Adjust based on navbar height
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-
-      setIsOpen(false); // Close mobile menu if open
-    }
+    // Close mobile menu first to avoid UI issues
+    setIsOpen(false);
+    
+    // Small timeout to allow DOM updates after menu closing
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const navbarHeight = 80; // Adjust based on navbar height
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - navbarHeight;
+  
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      } else {
+        console.error(`Element with id "${id}" not found`);
+      }
+    }, 100); // Small delay to ensure DOM is updated
   };
 
   return (
     <nav className="fixed w-full top-0 z-[9999] bg-primary/90 backdrop-blur-lg border border-white/10 shadow-lg max-sm:bg-primary/90">
-      <div className="mx-auto px-4 max-w-7xl flex justify-between items-center h-20">
+      <div className="mx-auto px-4 max-w-7xl flex items-center h-20">
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <a href="/" className="flex items-center mr-auto">
           <div className="flex items-center gap-4">
             <div>
               <img
@@ -61,67 +67,92 @@ const Navbar = () => {
           </div>
         </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm lg:text-base">
-          <NavLink
-            href="#"
-            text="Programs"
-            onClick={toggleCourseDropdown}
-            className="bg-secondary text-text_color px-6 py-3 rounded-full text-xl"
-          />
+        {/* Desktop Menu - Centered */}
+        <div className="hidden min-[920px]:flex items-center justify-center gap-8 text-sm lg:text-base mx-auto">
           <button
             onClick={() => scrollToSection("about")}
-            className="text-text_color text-lg font-medium hover:text-secondary transition"
+            className="text-text_color text-md font-bold hover:text-text_color transition"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("virtual-tour")}
-            className="text-text_color text-lg font-medium hover:text-secondary transition"
+            className="text-text_color text-md font-bold hover:text-text_color transition"
           >
             Virtual Tour
           </button>
+          <button
+            onClick={() => scrollToSection("awards")}
+            className="text-text_color text-md font-bold hover:text-text_color transition"
+          >
+            Awards & Achievements
+          </button>
+          <button
+            onClick={() => scrollToSection("logos")}
+            className="text-text_color text-md font-bold hover:text-text_color transition"
+          >
+            Recruiters 
+          </button>
+        </div>
+        
+        {/* Right side items */}
+        <div className="hidden min-[920px]:flex items-center ml-auto gap-4">
+          <NavLink
+            href="#"
+            text="Programs"
+            onClick={toggleCourseDropdown}
+            className="bg-secondary text-text_color px-5 py-2.5 rounded-full text-xl"
+          />
+         
           <a href="tel:18001372227" className="flex items-center text-text_color gap-1 hover:text-text_color transition-colors">
             <Phone size={18} />
             <span className="font-medium">Toll Free: 1800-137-2227</span>
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Changed from md to min-width 920px */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 text-text_color transition"
+          className="min-[920px]:hidden p-2 text-text_color transition ml-auto"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Changed from md to min-width 920px */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-3">
-          <MobileNavLink
-            href="#"
-            text="Programs"
+        <div className="min-[920px]:hidden px-4 pb-4 pt-2 bg-primary/95 backdrop-blur-md">
+          <button
+            onClick={() => scrollToSection("about")}
+            className="w-full text-left block text-text_color px-4 py-2.5 rounded-md font-medium transition hover:bg-primary/90"
+          >
+            About
+          </button>
+          <button
+            onClick={() => scrollToSection("virtual-tour")}
+            className="w-full text-left block text-text_color px-4 py-2.5 rounded-md font-medium transition hover:bg-primary/90"
+          >
+            Virtual Tour
+          </button>
+          <button
+            onClick={() => scrollToSection("awards")}
+            className="w-full text-left block text-text_color px-4 py-2.5 rounded-md font-medium transition hover:bg-primary/90"
+          >
+            Awards & Achievements
+          </button>
+
+          <button
             onClick={() => {
               setIsOpen(false);
               setIsCourseDropdownOpen((prev) => !prev);
             }}
-            className="bg-secondary px-4 py-2 rounded-full text-lg hover:bg-secondary transition"
-          />
-          <MobileNavLink
-            href="#"
-            text="About"
-            onClick={() => scrollToSection("about")}
-            className="px-4 py-2 rounded-md text-lg"
-          />
-          <MobileNavLink
-            href="#"
-            text="Virtual Tour"
-            onClick={() => scrollToSection("virtual-tour")}
-            className="px-4 py-2 rounded-md text-lg"
-          />
-          <a href="tel:18001372227" className="flex items-center text-text_color gap-1 mt-2 px-3 py-2 hover:text-secondary transition-colors">
+            className="w-full text-left block text-text_color px-4 py-2.5 rounded-md font-medium transition bg-secondary mt-2"
+          >
+            Programs
+          </button>
+         
+          <a href="tel:18001372227" className="flex items-center text-text_color gap-1 mt-2 px-4 py-2.5 hover:text-text_color transition-colors">
             <Phone size={18} />
             <span className="font-medium">Toll Free: 1800-137-2227</span>
           </a>
@@ -140,16 +171,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
-// Mobile Navigation Link Component
-const MobileNavLink = ({ href, text, onClick, className }) => (
-  <a
-    href={href}
-    onClick={onClick}
-    className={`block text-text_color px-3 py-2 rounded-md font-medium transition ${className}`}
-  >
-    {text}
-  </a>
-);
 
 export default Navbar;

@@ -16,44 +16,45 @@ const imageVariants = {
 // Awards Data
 const awardsData = [
   {
+    year: "2023",
+    achievements: [
+      "India Academia Ranking 2023 - This certificate is presented to CTIEMT positioned in Gold Band in India for Academic Excellence.",
+   
+    ],
+    image:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1742618574/IAR-min_iop1uj.jpg",
+    width: 600,
+    height: 400,
+  },
+  {
+    year: "2023",
+    achievements: [
+      "Research Excellence Ranking 2023 – This certificate is presented to CTIEMT positioned in the Gold Band in India for RESEARCH EXCELLENCE.",
+      
+    ],
+    image:
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1742618573/R_World_-_CTIEMT-min_d9tpic.jpg",
+    width: 600,
+    height: 400,
+  },
+  {
     year: "2022",
     achievements: [
-      "Received the prestigious Sir Viswesvaraya Award for ‘Best Corporate Entity’ at TechKnow '22",
-      "Won Sonatype Partner Award",
+      "OBE Rankings 2022 Outcome Based Education – Certificate of Excellence in pursuit of excellence towards offering Outcome Based Education, this certificate is presented to CTIEMT ranked in the Gold Band with A Grade (Higher Educational Institution of Excellence).",
+      
+   
     ],
     image:
-      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243056/naac_tjpfbm.jpg",
+      "https://res.cloudinary.com/dhkemgng9/image/upload/v1742618573/OBE_2022_-_CTIEMT-min_y9xcjc.jpg",
     width: 600,
     height: 400,
   },
-  {
-    year: "2021",
-    achievements: [
-      "RETINA360 wins 'Digital Technology of the Year: Big Data, IT & Analytics' Award at IWEF 2021",
-      "HR team wins ‘Best Business Communication’ Award at Corporate Communication Excellence Awards",
-    ],
-    image:
-      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243087/2_c0dbji.jpg",
-    width: 600,
-    height: 400,
-  },
-  {
-    year: "2020",
-    achievements: [
-      "FuelTrans Bags CII - SCALE Awards",
-      "rt360 wins ETBFSI Excellence Awards",
-      "retina360 wins Digital Technology of the Year at IWEF",
-    ],
-    image:
-      "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243086/3_czwymb.jpg",
-    width: 600,
-    height: 400,
-  },
+  
 ];
 
 const AwardsSection = () => {
   return (
-    <section className="relative py-20 px-6 bg-gradient-to-r from-[#f3f6fc] to-[#e5ecf9]">
+    <section className="relative py-20 px-6 bg-gradient-to-r from-[#f3f6fc] to-[#e5ecf9]" id="awards">
       {/* Background Design */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-[#94b7e5] to-[#94b7e5] opacity-20 rounded-full blur-3xl"></div>
@@ -127,9 +128,9 @@ const AwardsSection = () => {
                   {achievements.map((achievement, idx) => (
                     <li
                       key={idx}
-                      className="text-gray-800 text-sm md:text-lg leading-6 font-medium flex items-center gap-2"
+                      className="text-gray-800 text-xs md:text-base leading-5 md:leading-relaxed font-medium flex items-start gap-2"
                     >
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      <span className="w-1.5 h-1.5 mt-1 bg-primary rounded-full flex-shrink-0"></span>
                       {achievement}
                     </li>
                   ))}

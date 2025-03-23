@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 
 const Explorecollege = () => {
   return (
-    <div className="flex flex-col items-center px-4">
+    <div className="flex flex-col items-center px-4" id="virtual-tour">
       <h1
         className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary text-center pt-8"
         style={{

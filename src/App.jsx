@@ -28,7 +28,7 @@ const AcademicDisciplines = React.lazy(() =>
 );
 const AdminPage = React.lazy(() => import("./Admin/AdminPage"));
 const DataExport = React.lazy(() => import("./Admin/DataExport"));
-
+const AwardsSlider = React.lazy(() => import("./components/AwardsSlider"))
 // Home page component containing all existing content
 const HomePage = () => (
   <>
@@ -63,6 +63,7 @@ const HomePage = () => (
       {/* Additional Sections */}
       <CampusLife />
       <AwardsSection />
+      <AwardsSlider />
       <Testimonial />
       <div className="hidden md:block">
         <Explorecollege />
@@ -87,7 +88,7 @@ function App() {
   return (
     <Router>
       <div data-name="app" className="min-h-screen bg-white text-gray-900">
-        <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+        <Suspense fallback={<div className="text-center py-10">Welcome to CT GROUP</div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/admission_new/data/export" element={<DataExportPage />} />

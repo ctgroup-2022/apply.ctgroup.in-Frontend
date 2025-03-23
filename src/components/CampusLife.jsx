@@ -34,7 +34,7 @@ const features = [
 const gridImages = [
   {
     id: 1,
-    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1741243022/gym_zpxm4q.jpg",
+    url: "https://res.cloudinary.com/dhkemgng9/image/upload/v1742633820/DSC03963-min_roc9cg.jpg",
     title: "LIBRARY",
     description:
       "A resourceful space with a diverse collection of books, digital materials, and quiet study areas for research and learning.",

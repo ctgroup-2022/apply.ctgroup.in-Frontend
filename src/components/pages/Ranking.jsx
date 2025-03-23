@@ -13,33 +13,33 @@ export default function Ranking() {
   // Key points for left side - concise bullet points
   const rankingPoints = [
     {
-      icon: <Trophy className="w-5 h-5 text-amber-500" />,
-      title: "Premier Institute in Jalandhar",
-      description: "Leading educational excellence in the region",
+      icon: <Award className="w-5 h-5 text-dark_yellow_text" />,
+      title: "81 Registered Patents",
+      description: "Leading innovation through research & development",
     },
     {
-      icon: <Briefcase className="w-5 h-5 text-indigo-500" />,
+      icon: <Briefcase className="w-5 h-5 text-primary" />,
       title: "100% Placement Support",
       description: "Dedicated career services for every student",
     },
     {
-      icon: <Globe className="w-5 h-5 text-green-500" />,
+      icon: <Globe className="w-5 h-5 text-dark_text" />,
       title: "International Certifications",
       description: "Industry-recognized global qualifications",
     },
   
     {
-      icon: <Laptop className="w-5 h-5 text-blue-500" />,
+      icon: <Laptop className="w-5 h-5 text-button_color" />,
       title: "Advanced Skill Development",
       description: "Specialized courses beyond core curriculum",
     },
     {
-      icon: <Users className="w-5 h-5 text-purple-500" />,
+      icon: <Users className="w-5 h-5 text-secondary" />,
       title: "Expert Faculty Members",
       description: "Experienced educators with industry background",
     },
     {
-      icon: <Award className="w-5 h-5 text-red-500" />,
+      icon: <Award className="w-5 h-5 text-dark_red_text" />,
       title: "Industry Connection Program",
       description: "Regular workshops by field professionals",
     },
